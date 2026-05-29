@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific CV — [Your Name]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Design tokens ─── */
+    :root {
+      --ink:      #1a1714;
+      --paper:    #f5f2ec;
+      --mist:     #e8e3d9;
+      --accent:   #8b3a2f;
+      --accent2:  #2f5c8b;
+      --fade:     #9b9489;
+      --rule:     #d4cfc6;
+      --card-bg:  #faf8f4;
+      --mono:     'DM Mono', monospace;
+      --serif:    'Cormorant Garamond', Georgia, serif;
+      --sans:     'Outfit', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ─── Grain overlay ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .6;
+    }
+
+    /* ─── Navbar ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245,242,236,.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav-brand {
+      font-family: var(--mono);
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--fade);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .8rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--fade);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    /* Language switcher */
+    .lang-switcher {
+      display: flex;
+      gap: .4rem;
+      align-items: center;
+    }
+
+    .lang-btn {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      border: 1px solid var(--rule);
+      background: transparent;
+      color: var(--fade);
+      padding: .2rem .5rem;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all .2s;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+      background: var(--mist);
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: end;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: 'ORCID';
+      position: absolute;
+      right: -1rem;
+      top: 2rem;
+      font-family: var(--mono);
+      font-size: 7rem;
+      font-weight: 400;
+      color: var(--rule);
+      letter-spacing: -.02em;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-tagline {
+      margin-top: 1.2rem;
+      font-size: .9rem;
+      color: var(--fade);
+      letter-spacing: .04em;
+      max-width: 38ch;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: .8rem;
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--fade);
+      z-index: 1;
+    }
+
+    .hero-meta a {
+      color: var(--accent2);
+      text-decoration: none;
+      letter-spacing: .05em;
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+
+    .hero-meta a:hover { border-color: var(--accent2); }
+
+    .orcid-badge {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .7rem;
+    }
+
+    .orcid-icon {
+      width: 16px; height: 16px;
+      background: #a6ce39;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: .55rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ─── Main layout ─── */
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    /* ─── Section ─── */
+    section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--fade);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ─── About ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .about-bio {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #3d3830;
+    }
+
+    .about-bio p + p { margin-top: 1rem; }
+
+    .about-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .stat-item {
+      border-left: 2px solid var(--rule);
+      padding-left: 1rem;
+    }
+
+    .stat-label {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--fade);
+      margin-bottom: .2rem;
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--ink);
+    }
+
+    .stat-value a {
+      color: var(--accent2);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+
+    .stat-value a:hover { border-color: var(--accent2); }
+
+    /* ─── Publications / Talks ─── */
+    .pub-filter {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border: 1px solid var(--rule);
+      background: transparent;
+      color: var(--fade);
+      padding: .35rem .8rem;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all .2s;
+    }
+
+    .filter-btn.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* ─── Publication card ─── */
+    .pub-card {
+      border-top: 1px solid var(--rule);
+      padding: 1.6rem 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      cursor: pointer;
+      transition: background .15s;
+      position: relative;
+    }
+
+    .pub-card:hover { background: var(--card-bg); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+
+    .pub-year {
+      font-family: var(--mono);
+      font-size: .75rem;
+      color: var(--fade);
+      padding-top: .3rem;
+      min-width: 3.5rem;
+    }
+
+    .pub-body {}
+
+    .pub-type-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: .12rem .45rem;
+      border-radius: 2px;
+      margin-bottom: .6rem;
+    }
+
+    .pub-type-tag.paper { color: var(--accent); }
+    .pub-type-tag.talk  { color: var(--accent2); }
+    .pub-type-tag.preprint { color: #6b5e2f; }
+
+    .pub-title {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: .4rem;
+    }
+
+    .pub-authors {
+      font-size: .82rem;
+      color: var(--fade);
+      margin-bottom: .3rem;
+    }
+
+    .pub-venue {
+      font-size: .82rem;
+      color: var(--fade);
+      font-style: italic;
+    }
+
+    .pub-venue strong {
+      font-style: normal;
+      color: #5a5248;
+      font-weight: 400;
+    }
+
+    /* Expanded panel */
+    .pub-expand {
+      grid-column: 1 / -1;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .4s ease;
+    }
+
+    .pub-expand.open { max-height: 400px; }
+
+    .pub-expand-inner {
+      padding: 1rem 0 .5rem 5rem;
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .45rem 1rem;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--paper);
+      cursor: pointer;
+      transition: all .18s;
+    }
+
+    .pub-btn:hover,
+    .pub-btn:focus {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .pub-btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .pub-btn.primary:hover {
+      background: #6e2d24;
+      border-color: #6e2d24;
+    }
+
+    .pub-btn svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    .pub-abstract {
+      padding: 0 0 1rem 5rem;
+      font-size: .9rem;
+      color: #5a5248;
+      line-height: 1.7;
+      max-width: 65ch;
+    }
+
+    /* Chevron indicator */
+    .pub-chevron {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      color: var(--fade);
+      transition: transform .3s;
+    }
+
+    .pub-card.expanded .pub-chevron {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    /* ─── Skills / areas ─── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--rule);
+    }
+
+    .skill-item {
+      padding: 1.2rem;
+      background: var(--card-bg);
+      border: none;
+    }
+
+    .skill-item:hover { background: var(--mist); }
+
+    .skill-icon {
+      font-size: 1.5rem;
+      margin-bottom: .6rem;
+    }
+
+    .skill-name {
+      font-size: .85rem;
+      font-weight: 500;
+      margin-bottom: .25rem;
+    }
+
+    .skill-desc {
+      font-size: .78rem;
+      color: var(--fade);
+      line-height: 1.5;
+    }
+
+    /* ─── Contact ─── */
+    .contact-row {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: var(--mono);
+      font-size: .8rem;
+      color: var(--fade);
+      text-decoration: none;
+      letter-spacing: .05em;
+      transition: color .2s;
+    }
+
+    .contact-link:hover { color: var(--ink); }
+
+    .contact-link svg { width: 16px; height: 16px; }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--fade);
+      letter-spacing: .06em;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-meta { align-items: flex-start; }
+      .hero::after { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      nav { flex-wrap: wrap; height: auto; padding: .6rem 1.5rem; gap: .5rem; }
+      .nav-links { display: none; }
+      .pub-expand-inner { padding-left: 0; }
+      .pub-abstract { padding-left: 0; }
+      footer { flex-direction: column; gap: .5rem; text-align: center; }
+    }
+
+    /* ─── i18n hidden class ─── */
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+    span[data-lang].visible { display: inline; }
+    .lang-inline [data-lang].visible { display: inline; }
+
+    /* ─── Fade-in animation ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-name, .hero-tagline {
+      animation: fadeUp .7s ease both;
+    }
+
+    .hero-tagline { animation-delay: .12s; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav>
+  <a href="#" class="nav-brand">
+    <span data-lang="en" class="visible">Scientific CV</span>
+    <span data-lang="es">CV Científico</span>
+    <span data-lang="rm">CV Scientific</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">
+      <span data-lang="en" class="visible">About</span>
+      <span data-lang="es">Acerca de</span>
+      <span data-lang="rm">Davart</span>
+    </a></li>
+    <li><a href="#publications">
+      <span data-lang="en" class="visible">Publications</span>
+      <span data-lang="es">Publicaciones</span>
+      <span data-lang="rm">Publicaziuns</span>
+    </a></li>
+    <li><a href="#talks">
+      <span data-lang="en" class="visible">Talks</span>
+      <span data-lang="es">Ponencias</span>
+      <span data-lang="rm">Conferenzas</span>
+    </a></li>
+    <li><a href="#contact">
+      <span data-lang="en" class="visible">Contact</span>
+      <span data-lang="es">Contacto</span>
+      <span data-lang="rm">Contact</span>
+    </a></li>
+  </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-target="en">EN</button>
+    <button class="lang-btn" data-target="es">ES</button>
+    <button class="lang-btn" data-target="rm">RM</button>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="hero">
+  <div>
+    <h1 class="hero-name">
+      <!-- ✏️  Replace with your name. Use <em> for surname or given name -->
+      <span data-lang="en" class="visible">First<br><em>Last Name</em></span>
+      <span data-lang="es">Nombre<br><em>Apellido</em></span>
+      <span data-lang="rm">Num<br><em>Cognun</em></span>
+    </h1>
+    <p class="hero-tagline">
+      <!-- ✏️  Your research focus / institutional affiliation -->
+      <span data-lang="en" class="visible">Researcher · [Field] · [Institution], [Country]</span>
+      <span data-lang="es">Investigador/a · [Área] · [Institución], [País]</span>
+      <span data-lang="rm">Retschertader/a · [Champ] · [Instituziun], [Pajais]</span>
+    </p>
+  </div>
+  <div class="hero-meta">
+    <div class="orcid-badge">
+      <span class="orcid-icon">iD</span>
+      <a href="https://orcid.org/0000-0002-2190-010X" target="_blank">0000-0002-2190-010X</a>
+    </div>
+    <!-- ✏️  Add / remove external profile links as needed -->
+    <a href="https://scholar.google.com" target="_blank">Google Scholar ↗</a>
+    <a href="https://www.researchgate.net" target="_blank">ResearchGate ↗</a>
+    <!-- <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a> -->
+  </div>
+</header>
+
+<!-- ═══════════ MAIN ═══════════ -->
+<main>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section-label">
+      <span data-lang="en" class="visible">01 — About</span>
+      <span data-lang="es">01 — Acerca de</span>
+      <span data-lang="rm">01 — Davart</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-bio">
+        <!-- ✏️  Write your bio in each language -->
+        <div data-lang="en" class="visible">
+          <p>I am a researcher at [Institution] working on [broad research area]. My work focuses on [specific focus], with particular interest in [topics or methods].</p>
+          <p>I hold a [degree] from [University] and have collaborated with research groups in [countries/institutions]. My work has been published in [notable journals or venues].</p>
+        </div>
+        <div data-lang="es">
+          <p>Soy investigador/a en [Institución], trabajando en [área de investigación]. Mi trabajo se centra en [enfoque específico], con especial interés en [temas o métodos].</p>
+          <p>Tengo un [título] de [Universidad] y he colaborado con grupos de investigación en [países/instituciones]. Mi trabajo ha sido publicado en [revistas o eventos notables].</p>
+        </div>
+        <div data-lang="rm">
+          <p>Jau sun retschertader/a a [Instituziun], lavurant en [champ da retschertga]. Mia lavur sa concentrescha sin [focus specific], cun interess particular en [temas u metodas].</p>
+          <p>Hai in [grad] da [Universitad] ed hai collavurà cun grupps da retschertga en [pajais/instituziuns].</p>
+        </div>
+      </div>
+      <div class="about-stats">
+        <!-- ✏️  Update numbers / links -->
+        <div class="stat-item">
+          <div class="stat-label">
+            <span data-lang="en" class="visible">Affiliation</span>
+            <span data-lang="es">Afiliación</span>
+            <span data-lang="rm">Affiliaziun</span>
+          </div>
+          <div class="stat-value">[Institution Name]</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">
+            <span data-lang="en" class="visible">Research Areas</span>
+            <span data-lang="es">Áreas de Investigación</span>
+            <span data-lang="rm">Champs da Retschertga</span>
+          </div>
+          <div class="stat-value" style="font-size:1rem;">[Area 1] · [Area 2] · [Area 3]</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">ORCID</div>
+          <div class="stat-value">
+            <a href="https://orcid.org/0000-0002-2190-010X" target="_blank">0000-0002-2190-010X</a>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">
+            <span data-lang="en" class="visible">Email</span>
+            <span data-lang="es">Correo</span>
+            <span data-lang="rm">E-mail</span>
+          </div>
+          <div class="stat-value">
+            <a href="mailto:you@institution.edu" style="font-size:.9rem;">you@institution.edu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PUBLICATIONS ── -->
+  <section id="publications">
+    <div class="section-label">
+      <span data-lang="en" class="visible">02 — Publications</span>
+      <span data-lang="es">02 — Publicaciones</span>
+      <span data-lang="rm">02 — Publicaziuns</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="visible">Peer-reviewed work</span>
+      <span data-lang="es">Trabajo revisado por pares</span>
+      <span data-lang="rm">Lavurs cun revisiun da pèrs</span>
+    </h2>
+
+    <div class="pub-filter">
+      <button class="filter-btn active" data-filter="all">
+        <span data-lang="en" class="visible">All</span>
+        <span data-lang="es">Todos</span>
+        <span data-lang="rm">Tuts</span>
+      </button>
+      <button class="filter-btn" data-filter="paper">
+        <span data-lang="en" class="visible">Journal articles</span>
+        <span data-lang="es">Artículos</span>
+        <span data-lang="rm">Artitgels</span>
+      </button>
+      <button class="filter-btn" data-filter="preprint">
+        <span data-lang="en" class="visible">Preprints</span>
+        <span data-lang="es">Preprints</span>
+        <span data-lang="rm">Preprints</span>
+      </button>
+    </div>
+
+    <div class="pub-list" id="pub-list">
+
+      <!-- ══════════════════════════════════════
+           ✏️  TEMPLATE — copy/paste one <article> block per publication
+           Fields to fill:
+             data-type = "paper" | "preprint"
+             year, title (3 langs), authors, venue,
+             doi / open-access-url / slides-url
+      ═══════════════════════════════════════ -->
+
+      <!-- PUBLICATION 1 — Open Access example -->
+      <article class="pub-card" data-type="paper">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <span class="pub-type-tag paper">
+            <span data-lang="en" class="visible">Journal article</span>
+            <span data-lang="es">Artículo</span>
+            <span data-lang="rm">Artitgel</span>
+          </span>
+          <div class="pub-title">
+            <!-- ✏️  Replace with actual title -->
+            <span data-lang="en" class="visible">Title of Your First Paper Here</span>
+            <span data-lang="es">Título de tu primer artículo aquí</span>
+            <span data-lang="rm">Titel da vies emprim artitgel qua</span>
+          </div>
+          <div class="pub-authors">
+            <!-- ✏️  Author list — bold your name with <strong> -->
+            <strong>[Your Name]</strong>, Co-author A, Co-author B
+          </div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>[Journal Name]</strong>, vol. X, pp. Y–Z
+            </span>
+            <span data-lang="es">
+              <strong>[Nombre de la revista]</strong>, vol. X, pp. Y–Z
+            </span>
+            <span data-lang="rm">
+              <strong>[Num da la revista]</strong>, vol. X, pp. Y–Z
+            </span>
+          </div>
+        </div>
+        <!-- Chevron -->
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <!-- Expanded panel -->
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <!-- ✏️  Optional: short abstract or note -->
+            <span data-lang="en" class="visible">Brief description or abstract of the paper. Explain the main contribution and findings in 2–3 sentences.</span>
+            <span data-lang="es">Breve descripción o resumen del artículo.</span>
+            <span data-lang="rm">Curta descripziun u abstract da l'artitgel.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  For OPEN ACCESS papers: set href to the actual PDF/URL -->
+            <a class="pub-btn primary" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span data-lang="en" class="visible">Read paper</span>
+              <span data-lang="es">Leer artículo</span>
+              <span data-lang="rm">Leger artitgel</span>
+            </a>
+            <!-- ✏️  If you have slides for this paper -->
+            <!-- <a class="pub-btn" href="slides/paper1-slides.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Slides
+            </a> -->
+            <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              DOI
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 2 — Paywalled (DOI redirect only) -->
+      <article class="pub-card" data-type="paper">
+        <div class="pub-year">2023</div>
+        <div class="pub-body">
+          <span class="pub-type-tag paper">
+            <span data-lang="en" class="visible">Journal article</span>
+            <span data-lang="es">Artículo</span>
+            <span data-lang="rm">Artitgel</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible">Title of Your Second Paper</span>
+            <span data-lang="es">Título de tu segundo artículo</span>
+            <span data-lang="rm">Titel da vies segund artitgel</span>
+          </div>
+          <div class="pub-authors"><strong>[Your Name]</strong>, Co-author C</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible"><strong>[Journal Name]</strong>, vol. X, pp. Y–Z</span>
+            <span data-lang="es"><strong>[Nombre de la revista]</strong>, vol. X, pp. Y–Z</span>
+            <span data-lang="rm"><strong>[Num da la revista]</strong>, vol. X, pp. Y–Z</span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">This paper is available via the journal's paywall. Click the DOI to be redirected to the publisher's page.</span>
+            <span data-lang="es">Este artículo está detrás de un muro de pago. Haz clic en el DOI para acceder a la editorial.</span>
+            <span data-lang="rm">Quest artitgel è derrer d'in mur da pajament. Clicca il DOI per acceder al editur.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  DOI link only — no open access PDF -->
+            <a class="pub-btn primary" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              <span data-lang="en" class="visible">Go to DOI</span>
+              <span data-lang="es">Ir al DOI</span>
+              <span data-lang="rm">Ir al DOI</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 3 — Preprint -->
+      <article class="pub-card" data-type="preprint">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <span class="pub-type-tag preprint">Preprint</span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible">Title of Preprint Paper</span>
+            <span data-lang="es">Título del preprint</span>
+            <span data-lang="rm">Titel dal preprint</span>
+          </div>
+          <div class="pub-authors"><strong>[Your Name]</strong>, Co-author D, Co-author E</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible"><strong>bioRxiv / arXiv / [Server]</strong></span>
+            <span data-lang="es"><strong>bioRxiv / arXiv / [Servidor]</strong></span>
+            <span data-lang="rm"><strong>bioRxiv / arXiv / [Server]</strong></span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">Brief description of the preprint.</span>
+            <span data-lang="es">Breve descripción del preprint.</span>
+            <span data-lang="rm">Curta descripziun dal preprint.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <a class="pub-btn primary" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span data-lang="en" class="visible">Read preprint</span>
+              <span data-lang="es">Leer preprint</span>
+              <span data-lang="rm">Leger preprint</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /pub-list publications -->
+  </section>
+
+  <!-- ── TALKS / PONENCIAS ── -->
+  <section id="talks">
+    <div class="section-label">
+      <span data-lang="en" class="visible">03 — Talks & Conferences</span>
+      <span data-lang="es">03 — Ponencias y Conferencias</span>
+      <span data-lang="rm">03 — Conferenzas e Congresses</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="visible">Presentations</span>
+      <span data-lang="es">Presentaciones</span>
+      <span data-lang="rm">Presentaziuns</span>
+    </h2>
+
+    <div class="pub-list" id="talk-list">
+
+      <!-- ══════════════════════════════════════
+           ✏️  TEMPLATE — copy/paste one <article> per talk
+           data-type = "talk"
+      ═══════════════════════════════════════ -->
+
+      <!-- TALK 1 — With slides (hosted in /slides/) -->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Conference talk</span>
+            <span data-lang="es">Ponencia</span>
+            <span data-lang="rm">Conferenza</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible">Title of Your Conference Talk</span>
+            <span data-lang="es">Título de tu ponencia</span>
+            <span data-lang="rm">Titel da voss discurs da conferenza</span>
+          </div>
+          <div class="pub-authors"><strong>[Your Name]</strong></div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>[Conference Name]</strong> · [City, Country] · [Month Year]
+            </span>
+            <span data-lang="es">
+              <strong>[Nombre del Congreso]</strong> · [Ciudad, País] · [Mes Año]
+            </span>
+            <span data-lang="rm">
+              <strong>[Num dal Congres]</strong> · [Citad, Pajais] · [Mais Onn]
+            </span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">Short description of the talk and its key contribution to the conference discussion.</span>
+            <span data-lang="es">Breve descripción de la ponencia y su contribución principal.</span>
+            <span data-lang="rm">Curta descripziun dal discurs e sia contribuziun principala.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  Host your slides as PDF in a /slides/ folder in the repo -->
+            <a class="pub-btn primary" href="slides/talk1-slides.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View slides</span>
+              <span data-lang="es">Ver diapositivas</span>
+              <span data-lang="rm">Vesair slides</span>
+            </a>
+            <!-- ✏️  If the conference has a proceedings DOI -->
+            <!-- <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Proceedings DOI
+            </a> -->
+          </div>
+        </div>
+      </article>
+
+      <!-- TALK 2 — Poster -->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2023</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Poster</span>
+            <span data-lang="es">Póster</span>
+            <span data-lang="rm">Poster</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible">Title of Your Poster Presentation</span>
+            <span data-lang="es">Título de tu presentación de póster</span>
+            <span data-lang="rm">Titel da vossa presentaziun da poster</span>
+          </div>
+          <div class="pub-authors"><strong>[Your Name]</strong>, Co-presenter</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>[Conference Name]</strong> · [City, Country] · [Month Year]
+            </span>
+            <span data-lang="es">
+              <strong>[Nombre del Congreso]</strong> · [Ciudad, País] · [Mes Año]
+            </span>
+            <span data-lang="rm">
+              <strong>[Num dal Congres]</strong> · [Citad, Pajais] · [Mais Onn]</span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">Short summary of the poster's topic and findings.</span>
+            <span data-lang="es">Breve resumen del tema y hallazgos del póster.</span>
+            <span data-lang="rm">Curta resumaziun dal tema e dals resultats dal poster.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <a class="pub-btn primary" href="slides/poster1.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View poster</span>
+              <span data-lang="es">Ver póster</span>
+              <span data-lang="rm">Vesair poster</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /pub-list talks -->
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="section-label">
+      <span data-lang="en" class="visible">04 — Contact</span>
+      <span data-lang="es">04 — Contacto</span>
+      <span data-lang="rm">04 — Contact</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="visible">Get in touch</span>
+      <span data-lang="es">Contactarme</span>
+      <span data-lang="rm">Cuntactar</span>
+    </h2>
+    <div class="contact-row">
+      <!-- ✏️  Update all hrefs -->
+      <a href="mailto:you@institution.edu" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+        you@institution.edu
+      </a>
+      <a href="https://orcid.org/0000-0002-2190-010X" target="_blank" class="contact-link">
+        <span class="orcid-icon" style="width:16px;height:16px;font-size:.5rem;">iD</span>
+        ORCID
+      </a>
+      <a href="https://scholar.google.com" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        Google Scholar
+      </a>
+      <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        GitHub
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <span>
+    <span data-lang="en" class="visible">© 2025 [Your Name]. Built with plain HTML — hosted on GitHub Pages.</span>
+    <span data-lang="es">© 2025 [Tu Nombre]. Construido con HTML — alojado en GitHub Pages.</span>
+    <span data-lang="rm">© 2025 [Voss Num]. Construì cun HTML — alugià sin GitHub Pages.</span>
+  </span>
+  <a href="https://orcid.org/0000-0002-2190-010X" target="_blank" style="color:var(--fade);text-decoration:none;">
+    ORCID 0000-0002-2190-010X
+  </a>
+</footer>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+  /* ── Language switcher ── */
+  const langBtns = document.querySelectorAll('.lang-btn');
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    // Toggle [data-lang] elements
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    // Update active button
+    langBtns.forEach(b => b.classList.toggle('active', b.dataset.target === lang));
+    // Update html lang attribute
+    document.documentElement.lang = lang === 'rm' ? 'rm' : lang;
+  }
+
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.dataset.target));
+  });
+
+  /* ── Publication expand / collapse ── */
+  document.querySelectorAll('.pub-card').forEach(card => {
+    card.addEventListener('click', e => {
+      // Don't toggle if user clicked an actual link
+      if (e.target.closest('a')) return;
+      const panel = card.querySelector('.pub-expand');
+      if (!panel) return;
+      const isOpen = panel.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.pub-expand.open').forEach(p => {
+        p.classList.remove('open');
+        p.closest('.pub-card').classList.remove('expanded');
+      });
+      // Open this one if it was closed
+      if (!isOpen) {
+        panel.classList.add('open');
+        card.classList.add('expanded');
+      }
+    });
+  });
+
+  /* ── Filter buttons (publications section) ── */
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('#pub-list .pub-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.type === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  /* ── Init: show English by default ── */
+  setLang('en');
+</script>
+</body>
+</html>
