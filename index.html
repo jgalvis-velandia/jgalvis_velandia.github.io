@@ -127,8 +127,8 @@
       overflow: hidden;
     }
 
-    .hero::after {
-      content: 'ORCID';
+    /* .hero::after {
+      content: 'ORCIDD';
       position: absolute;
       right: -1rem;
       top: 2rem;
@@ -139,7 +139,7 @@
       letter-spacing: -.02em;
       pointer-events: none;
       user-select: none;
-    }
+    } */
 
     .hero-name {
       font-family: var(--serif);
@@ -404,7 +404,7 @@
       transition: max-height .4s ease;
     }
 
-    .pub-expand.open { max-height: 400px; }
+    .pub-expand.open { max-height: 750px; }
 
     .pub-expand-inner {
       padding: 1rem 0 .5rem 5rem;
@@ -629,10 +629,18 @@
     </h1>
     <p class="hero-tagline">
       <!-- ✏️  Your research focus / institutional affiliation -->
-      <span data-lang="en" class="visible">Researcher · [Field] · [Institution], [Country]</span>
-      <span data-lang="es">Investigador/a · [Área] · [Institución], [País]</span>
-      <span data-lang="rm">Retschertader/a · [Champ] · [Instituziun], [Pajais]</span>
+      <span data-lang="en" class="visible">Electronic Engineer · Universidad Francisco de Paula Santander, Colombia</span>
+      <span data-lang="es">Ingeniero Electrónico · Universidad Francisco de Paula Santander, Colombia</span>
+      <span data-lang="rm">Inschigner electronic· Universidad Francisco de Paula Santander, Colombia</span>
     </p>
+
+      <p class="hero-tagline">
+      <!-- ✏️  Your research focus / institutional affiliation -->
+      <span data-lang="en" class="visible">M.Sc. in Computational Engineering and Intelligent Systems · University of Basque Country, Spain</span>
+      <span data-lang="es">Máster en Ingeniería Computacional y Sistemas Inteligentes · Universiad del País Vasco, España</span>
+      <span data-lang="rm">Master in Inschigneria Computazional e Sistems Intelligents · Universtad dal Pajais Basc, Spagna</span>
+    </p>
+
   </div>
   <div class="hero-meta">
     <div class="orcid-badge">
@@ -640,9 +648,9 @@
       <a href="https://orcid.org/0000-0002-2190-010X" target="_blank">0000-0002-2190-010X</a>
     </div>
     <!-- ✏️  Add / remove external profile links as needed -->
-    <a href="https://scholar.google.com" target="_blank">Google Scholar ↗</a>
-    <a href="https://www.researchgate.net" target="_blank">ResearchGate ↗</a>
-    <!-- <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a> -->
+    <a href="https://scholar.google.com/citations?user=IGZDYH4AAAAJ&hl=es&authuser=7" target="citations?user=IGZDYH4AAAAJ&hl=es&authuser=7">Google Scholar ↗</a>
+    <a href="https://www.researchgate.net/profile/Jorge-Eliecer-Galvis-Velandia?ev=prf_overview" target="_blank">ResearchGate ↗</a>
+    <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001650449" target="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001650449">CvLaC↗</a>
   </div>
 </header>
 
@@ -660,11 +668,11 @@
       <div class="about-bio">
         <!-- ✏️  Write your bio in each language -->
         <div data-lang="en" class="visible">
-          <p>I am a researcher at [Institution] working on [broad research area]. My work focuses on [specific focus], with particular interest in [topics or methods].</p>
-          <p>I hold a [degree] from [University] and have collaborated with research groups in [countries/institutions]. My work has been published in [notable journals or venues].</p>
+          <p>Electronic Engineer from Universidad Francisco de Paula Santander (Colombia, 2021) and MSc in Computational Engineering and Intelligent Systems from UPV/EHU (San Sebastián, Spain). Over four years of professional experience spanning Business Intelligence and data analysis at Ecopetrol, digital transformation leadership at CENS, and AI research at Vicomtech, where I worked on domain adaptation for 3D object detection with LiDAR applied to autonomous driving.</p>
         </div>
         <div data-lang="es">
-          <p>Soy investigador/a en [Institución], trabajando en [área de investigación]. Mi trabajo se centra en [enfoque específico], con especial interés en [temas o métodos].</p>
+          <p>B.Sc en Ingeniería Electrónica de la Universidad Francisco de Paula Santander, Cúcuta, Colombia, en 2021. Analista de datos desde 2022. Máster en Ingeniería Computacional y Sistemas Inteligentes en la UPV/EHU de Donostia, España, con experiencia en análisis de estadísticas deportivas, gestión de datos empresariales, visión por computador y sistemas de conducción autónoma. Las líneas de investigación activas son las matemáticas aplicadas, modelos de Deep Learning, visión por computador, conducción autónoma, electrónica de potencia y comunicaciones por fibra óptica.
+</p>
           <p>Tengo un [título] de [Universidad] y he colaborado con grupos de investigación en [países/instituciones]. Mi trabajo ha sido publicado en [revistas o eventos notables].</p>
         </div>
         <div data-lang="rm">
@@ -688,7 +696,7 @@
             <span data-lang="es">Áreas de Investigación</span>
             <span data-lang="rm">Champs da Retschertga</span>
           </div>
-          <div class="stat-value" style="font-size:1rem;">[Area 1] · [Area 2] · [Area 3]</div>
+          <div class="stat-value" style="font-size:1rem;">Artificial Intelligence · Computer Vision · Applied Mathematics · Dynamic Systems · Electronics</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">ORCID</div>
@@ -703,7 +711,7 @@
             <span data-lang="rm">E-mail</span>
           </div>
           <div class="stat-value">
-            <a href="mailto:you@institution.edu" style="font-size:.9rem;">you@institution.edu</a>
+            <a href="mailto:galvisvelandiajorge@gmail.com" style="font-size:.9rem;">galvisvelandiajorge@gmail.com</a>
           </div>
         </div>
       </div>
@@ -739,6 +747,11 @@
         <span data-lang="es">Preprints</span>
         <span data-lang="rm">Preprints</span>
       </button>
+      <button class="filter-btn" data-filter="book">
+        <span data-lang="en" class="visible">Book</span>
+        <span data-lang="es">Libro</span>
+        <span data-lang="rm">Livre</span>
+      </button>
     </div>
 
     <div class="pub-list" id="pub-list">
@@ -751,34 +764,34 @@
              doi / open-access-url / slides-url
       ═══════════════════════════════════════ -->
 
-      <!-- PUBLICATION 1 — Open Access example -->
-      <article class="pub-card" data-type="paper">
+      <!-- PUBLICATION 1 — Libro Fibra Óptica -->
+      <article class="pub-card" data-type="book">
         <div class="pub-year">2024</div>
         <div class="pub-body">
           <span class="pub-type-tag paper">
-            <span data-lang="en" class="visible">Journal article</span>
-            <span data-lang="es">Artículo</span>
+            <span data-lang="en" class="visible">Book</span>
+            <span data-lang="es">Libro</span>
             <span data-lang="rm">Artitgel</span>
           </span>
           <div class="pub-title">
             <!-- ✏️  Replace with actual title -->
-            <span data-lang="en" class="visible">Title of Your First Paper Here</span>
-            <span data-lang="es">Título de tu primer artículo aquí</span>
+            <span data-lang="en" class="visible">Linear and non-linear phenomena in fiber optic transmission: Approach and simulation</span>
+            <span data-lang="es">Fenómenos lineales y no lineales en la transmisión por fibra óptica: Planteamiento y simulación</span>
             <span data-lang="rm">Titel da vies emprim artitgel qua</span>
           </div>
           <div class="pub-authors">
             <!-- ✏️  Author list — bold your name with <strong> -->
-            <strong>[Your Name]</strong>, Co-author A, Co-author B
+            <strong>J. Galvis-Velandia</strong>, K. C. Puerto-López, L. L. Camargo-Ariza
           </div>
           <div class="pub-venue">
             <span data-lang="en" class="visible">
-              <strong>[Journal Name]</strong>, vol. X, pp. Y–Z
+              <strong>Editorial Unimagdalena</strong>, 1st Edition, ISBN: 978-958-746-776-5
             </span>
             <span data-lang="es">
-              <strong>[Nombre de la revista]</strong>, vol. X, pp. Y–Z
+              <strong>Editorial Unimagdalena</strong>, 1st Edition, ISBN: 978-958-746-776-5
             </span>
             <span data-lang="rm">
-              <strong>[Num da la revista]</strong>, vol. X, pp. Y–Z
+              <strong>Editorial Unimagdalena</strong>, 1st Edition, ISBN: 978-958-746-776-5
             </span>
           </div>
         </div>
@@ -788,13 +801,19 @@
         <div class="pub-expand">
           <div class="pub-abstract">
             <!-- ✏️  Optional: short abstract or note -->
-            <span data-lang="en" class="visible">Brief description or abstract of the paper. Explain the main contribution and findings in 2–3 sentences.</span>
-            <span data-lang="es">Breve descripción o resumen del artículo.</span>
+            <span data-lang="en" class="visible">Optical fibers exhibit phenomena that affect the performance of communication systems. Understanding these behaviors facilitates the selection of the required fiber type, the optimization of the chosen fiber's capacity, and the mitigation of adverse effects. For these reasons, this book provides the mathematical and conceptual analysis of the linear and nonlinear phenomena present in optical fiber data transmission. The work uses simple language, with specific examples, and utilizes a free computational tool to expedite mathematical calculations and graphs. First, the reader is introduced to the types of optical fibers, the components of an optoelectronic system, the electromagnetic spectrum in which they operate, the nonlinear Schrödinger equation, and the Helmholtz equation. Next, the application of geometric optics to fiber optics is presented. Subsequently, the text focuses on attenuation and dispersion phenomena within the framework of linear operation and then considers nonlinear operation, the Kerr effect, phase self-modulation, and third-order dispersion. Finally, fourth-wave mixing in a three-channel system is analysed.
+            <p><strong>Keywords:</strong> Geometric optics, Attenuation, Dispersion, Self-phase modulation (SPM), Fourth-wave mixing (FWM)</p>
+            </span>
+            <span data-lang="es">En la fibra óptica se presentan fenómenos que afectan el rendimiento de los sistemas de comunicación. Comprender estos comportamientos facilita la selección del tipo de fibra requerido, la optimización de la capacidad de la fibra óptica elegida y la mitigación de los efectos adversos. Por estas razones, en este libro se proporciona el análisis matemático y conceptual de los fenómenos lineales y no lineales presentes en la transmisión de datos por fibra óptica. La obra usa un lenguaje sencillo, con ejemplos puntuales, y utiliza como apoyo una herramienta computacional libre para agilizar los cálculos matemáticos y los gráficos. Primero, se introduce al lector a los tipos de fibra óptica, los componentes de un sistema optoelectrónico, el espectro electromagnético donde operan, la ecuación no lineal de Schrödinger y la ecuación de Helmholtz; seguidamente, se presenta la aplicación de la óptica geométrica en la fibra; posteriormente, el texto se enfoca en los fenómenos de atenuación y dispersión en el marco de una operación lineal y luego considera la operación no lineal, el efecto Kerr, la automodulación de fase y la dispersión de tercer orden. Por último, se analiza la mezcla de cuarta onda en un sistema de tres canales.
+
+            <p><strong>Palabras clave:</strong>Óptica geométrica, Atenuación, Dispersión, Automodulación de fase (SPM), Mezcla de cuarta onda (FWM)</p>
+
+</span>
             <span data-lang="rm">Curta descripziun u abstract da l'artitgel.</span>
           </div>
           <div class="pub-expand-inner">
             <!-- ✏️  For OPEN ACCESS papers: set href to the actual PDF/URL -->
-            <a class="pub-btn primary" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+            <a class="pub-btn primary" href="https://simehbucket.s3.amazonaws.com/miscfiles/9789587467765_kgwgm66f.pdf" target="_blank">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
               <span data-lang="en" class="visible">Read paper</span>
               <span data-lang="es">Leer artículo</span>
@@ -805,7 +824,144 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
               Slides
             </a> -->
-            <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+            <a class="pub-btn" href="https://doi.org/10.21676/9789587467765" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              DOI
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 1 — Entre Ciencie e Ingeniería -->
+      <article class="pub-card" data-type="paper">
+        <div class="pub-year">2022</div>
+        <div class="pub-body">
+          <span class="pub-type-tag paper">
+            <span data-lang="en" class="visible">Journal article</span>
+            <span data-lang="es">Artículo</span>
+            <span data-lang="rm">Artitgel</span>
+          </span>
+          <div class="pub-title">
+            <!-- ✏️  Replace with actual title -->
+            <span data-lang="en" class="visible">Analysis of the design of graphical user interfaces for the control and monitoring of optoelectronic systems applied to telecommunications and electronic instrumentation</span>
+            <span data-lang="es">Análisis del diseño de interfaces gráficas de usuario para el control y monitorización de sistemas optoelectrónicos aplicados a telecomunicaciones e instrumentación electrónica
+</span>
+            <span data-lang="rm">Titel da vies emprim artitgel qua</span>
+          </div>
+          <div class="pub-authors">
+            <!-- ✏️  Author list — bold your name with <strong> -->
+            <strong>J. Galvis-Velandia</strong>, K. C. Puerto-López, L. N. Galvis-Velandia, J- J. Ramírez-Mateus
+          </div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>Entre Ciencia e Ingeniería</strong>, vol. 16, no. 31, pp. 33–42
+            </span>
+            <span data-lang="es">
+              <strong>Entre Ciencia e Ingeniería</strong>, vol. 16, no. 31, pp. 33–42
+            </span>
+            <span data-lang="rm">
+              <strong>Entre Ciencia e Ingeniería</strong>, vol. 16, no. 31, pp. 33–42
+            </span>
+          </div>
+        </div>
+        <!-- Chevron -->
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <!-- Expanded panel -->
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <!-- ✏️  Optional: short abstract or note -->
+            <span data-lang="en" class="visible">The analysis of graphical user interfaces (GUIs) applied to optical electronic systems for telecommunications and instrumentation reveals the possibilities for integrating engineering systems with computer equipment to facilitate information access and optimize human-machine interaction in the diverse scenarios of today's industries. Using academic databases indexed and accepted by the scientific community, a total of sixty bibliographic references focused on the design and implementation of graphical user interfaces developed internationally, in Colombia, and in the Norte de Santander region were consulted. The analysis examined different programming environments and the expected usability in the control and monitoring of optoelectronic systems. The study observed a surge in the use of open-source programming environments and a tendency among researchers to integrate multiple development platforms to leverage the characteristics of each.
+            <p><strong>Keywords:</strong> fiber optics, GUI, electronic instrumentation, optoelectronics, telecommunications, open-source software</p>
+            </span>
+            <span data-lang="es">El análisis del uso de interfaces gráficas de usuario (GUI) aplicado a sistemas electrónicos ópticos para telecomunicaciones e instrumentación, permite observar las posibilidades existentes en la integración de sistemas ingenieriles con equipos de cómputo para facilitar el acceso a la información y optimizar la interacción hombre/máquina en los diferentes escenarios de las industrias que se desarrollan en la actualidad.  Mediante el uso de bases de datos académicas, indexadas y aceptadas por la comunidad científica, se consultaron un total de sesenta referencias bibliográficas orientas al diseño e implementación de interfaces gráficas de usuario desarrolladas a nivel internacional, en Colombia y en la región de Norte de Santander, analizando los diferentes entornos de programación y la usabilidad esperada en el control y monitorización de sistemas optoelectrónicos. Se observa el auge en el uso de entornos de programación de licencia abierta y que los investigadores tienden a integrar múltiples plataformas de desarrollo para aprovechar las características de cada uno de ellos.
+
+            <p><strong>Palabras clave:</strong>fibra óptica, GUI, instrumentación electrónica, optoelectrónica, telecomunicaciones, software libre</p>
+
+</span>
+            <span data-lang="rm">Curta descripziun u abstract da l'artitgel.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  For OPEN ACCESS papers: set href to the actual PDF/URL -->
+            <a class="pub-btn primary" href="https://revistas.ucp.edu.co/index.php/entrecienciaeingenieria/article/view/2686/2579" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span data-lang="en" class="visible">Read paper</span>
+              <span data-lang="es">Leer artículo</span>
+              <span data-lang="rm">Leger artitgel</span>
+            </a>
+            <!-- ✏️  If you have slides for this paper -->
+            <!-- <a class="pub-btn" href="slides/paper1-slides.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Slides
+            </a> -->
+            <a class="pub-btn" href="https://doi.org/10.31908/19098367.2686" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              DOI
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 1 — IOP -->
+      <article class="pub-card" data-type="paper">
+        <div class="pub-year">2021</div>
+        <div class="pub-body">
+          <span class="pub-type-tag paper">
+            <span data-lang="en" class="visible">Conference proceedings</span>
+            <span data-lang="es">Artículo de conferencia</span>
+            <span data-lang="rm">Artitgel</span>
+          </span>
+          <div class="pub-title">
+            <!-- ✏️  Replace with actual title -->
+            <span data-lang="en" class="visible">Analysis of linear and non-linear effects in the frequency domain for a three-channel optical transmission system</span>
+            <span data-lang="es">Análisis de los efectos lineales y no lineales en el dominio de la frecuencia para un sistema de transmisión óptica de tres canales.</span>
+            <span data-lang="rm">Titel da vies emprim artitgel qua</span>
+          </div>
+          <div class="pub-authors">
+            <!-- ✏️  Author list — bold your name with <strong> -->
+            <strong>J. Galvis-Velandia</strong>, K. C. Puerto-López, J. J. Ramírez-Mateus
+          </div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>Journal of Physics: Conference Series</strong>, vol. 2102, no. 012017, pp. 26-27
+            </span>
+            <span data-lang="es">
+              <strong>Journal of Physics: Conference Series</strong>, vol. 2102, no. 012017, pp. 26-27
+            </span>
+            <span data-lang="rm">
+              <strong>Journal of Physics: Conference Series</strong>, vol. 2102, no. 012017, pp. 26-27
+            </span>
+          </div>
+        </div>
+        <!-- Chevron -->
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <!-- Expanded panel -->
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <!-- ✏️  Optional: short abstract or note -->
+            <span data-lang="en" class="visible">This paper presents the analysis of a wavelength division multiplexer communication system in the frequency domain, with the objective of visualizing the incidence of the linear phenomena of attenuation and chromatic dispersion, together with the phenomenon of phase self-modulation, the Kerr electro-optical effect and fourth wave mixing. The analyzed system consists of a laser transmitter with a Mach-Zender modulator and a standard G.625b single-mode fiber link transmitting three optical signals of 10 mW, 25 mW and 50 mW at a fundamental wavelength of 1550 nm at a rate of 10 Gbps. This system is analyzed through a graphical user interface programmed by the authors in the Python environment, which calculates the parameters corresponding to each phenomenon and graphically represents the transmission results at distances of 50 km and 100 km. The analysis methodology consists of varying the spectral separation of the transmitted channels, initially considering a spectral separation of 2 nm and subsequently a spectral separation of 0.2 nm, observing as a result that the harmonics generated by the fourth wave mixing phenomenon considerably alter the spectral density of the transmitted signals, since the energy of the harmonics is equal to the power of the transmitted signals. On the other hand, with the spectral spacing of 0.2 nm, it is obtained that, although the harmonics alter the spectral density waveform, the bandwidth is not compromised by these additional signals.
+            <p><strong>Keywords:</strong> Optical fibers, Optical fiber communication, Optical transmitters, Fourth-Wave Mixing (FWM), Nonlinear communications</p>
+            </span>
+            <span data-lang="es">Este artículo presenta el análisis de un sistema de comunicación multiplexor por división de longitud de onda en el dominio de la frecuencia, con el objetivo de visualizar la incidencia de los fenómenos lineales de atenuación y dispersión cromática, junto con el fenómeno de automodulación de fase, el efecto electroóptico de Kerr y la mezcla de cuarta onda. El sistema analizado consta de un transmisor láser con un modulador Mach-Zehnder y un enlace de fibra monomodo estándar G.625b que transmite tres señales ópticas de 10 mW, 25 mW y 50 mW a una longitud de onda fundamental de 1550 nm a una velocidad de 10 Gbps. Este sistema se analiza mediante una interfaz gráfica de usuario programada por los autores en el entorno Python, que calcula los parámetros correspondientes a cada fenómeno y representa gráficamente los resultados de la transmisión a distancias de 50 km y 100 km. La metodología de análisis consiste en variar la separación espectral de los canales transmitidos, considerando inicialmente una separación espectral de 2 nm y posteriormente una de 0,2 nm. Como resultado, se observa que los armónicos generados por el fenómeno de mezcla de cuarta onda alteran considerablemente la densidad espectral de las señales transmitidas, ya que la energía de los armónicos es igual a la potencia de las señales transmitidas. Por otro lado, con una separación espectral de 0,2 nm, se obtiene que, si bien los armónicos alteran la forma de onda de la densidad espectral, el ancho de banda no se ve comprometido por estas señales adicionales.
+
+            <p><strong>Palabras clave:</strong>Fibras ópticas, comunicación por fibra óptica, transmisores ópticos, mezcla de cuarta onda (FWM), comunicaciones no lineales</p>
+
+</span>
+            <span data-lang="rm">Curta descripziun u abstract da l'artitgel.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  For OPEN ACCESS papers: set href to the actual PDF/URL -->
+            <a class="pub-btn primary" href="https://iopscience.iop.org/article/10.1088/1742-6596/2102/1/012017/pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span data-lang="en" class="visible">Read paper</span>
+              <span data-lang="es">Leer artículo</span>
+              <span data-lang="rm">Leger artitgel</span>
+            </a>
+            <!-- ✏️  If you have slides for this paper -->
+            <!-- <a class="pub-btn" href="slides/paper1-slides.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Slides
+            </a> -->
+            <a class="pub-btn" href="http://doi.org/10.1088/1742-6596/2102/1/012017" target="_blank">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
               DOI
             </a>
@@ -815,35 +971,39 @@
 
       <!-- PUBLICATION 2 — Paywalled (DOI redirect only) -->
       <article class="pub-card" data-type="paper">
-        <div class="pub-year">2023</div>
+        <div class="pub-year">2021</div>
         <div class="pub-body">
           <span class="pub-type-tag paper">
-            <span data-lang="en" class="visible">Journal article</span>
-            <span data-lang="es">Artículo</span>
+            <span data-lang="en" class="visible">Conference proceedings</span>
+            <span data-lang="es">Artículo de conferencia</span>
             <span data-lang="rm">Artitgel</span>
           </span>
           <div class="pub-title">
-            <span data-lang="en" class="visible">Title of Your Second Paper</span>
-            <span data-lang="es">Título de tu segundo artículo</span>
+            <span data-lang="en" class="visible">Linear and Non-linear Effects in Fiber Optic Transmission
+</span>
+            <span data-lang="es">Efectos lineales y no lineales en la transmisión por fibra óptica</span>
             <span data-lang="rm">Titel da vies segund artitgel</span>
           </div>
-          <div class="pub-authors"><strong>[Your Name]</strong>, Co-author C</div>
+          <div class="pub-authors"><strong>J. Galvis-Velandia</strong>, K. C. Puerto-López, L. F. García-Ortíz</div>
           <div class="pub-venue">
-            <span data-lang="en" class="visible"><strong>[Journal Name]</strong>, vol. X, pp. Y–Z</span>
-            <span data-lang="es"><strong>[Nombre de la revista]</strong>, vol. X, pp. Y–Z</span>
-            <span data-lang="rm"><strong>[Num da la revista]</strong>, vol. X, pp. Y–Z</span>
+            <span data-lang="en" class="visible"><strong>2021 IEEE Colombian Conference on Communications and Computing (COLCOM)</strong>, pp. 1-6</span>
+            <span data-lang="es"><strong>2021 IEEE Colombian Conference on Communications and Computing (COLCOM)</strong>, pp. 1-6</span>
+            <span data-lang="rm"><strong>2021 IEEE Colombian Conference on Communications and Computing (COLCOM)</strong>, pp. 1-6</span>
           </div>
         </div>
         <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
         <div class="pub-expand">
           <div class="pub-abstract">
-            <span data-lang="en" class="visible">This paper is available via the journal's paywall. Click the DOI to be redirected to the publisher's page.</span>
-            <span data-lang="es">Este artículo está detrás de un muro de pago. Haz clic en el DOI para acceder a la editorial.</span>
+            <span data-lang="en" class="visible">The following work presents the incidence of linear and non-linear phenomena in digital fiber optic communications through the implementation of a graphical user interface (GUI) designed in the Python multiparadigm programming environment, where the linear attenuation and dispersion phenomena are evaluated. modal considering the group velocity dispersion (GVD) and the third order dispersion (TOD), together with the non-linear phenomenon of phase self-modulation SPM. The methodology consists of selecting a single-mode fiber optic link under the G.652 standard and varying the operating conditions of the communication system based on a Mach-Zehnder (MZM) transmitter and a signal modulated by digital amplitude modulation OOK. The results show the dependence of the linear and non-linear effects in the transmission as a function of the temporal width of the input Gaussian pulse and the wavelength of the laser, when observing that the higher the wavelength the non-linear effects of the fiber affect communication, and that these effects can be mitigated by reducing the wavelength of the laser.
+            <p><strong>Keywords:</strong> Optical fibers, Optical fiber communication, Optical transmitters, Standards, Optical fiber dispersion, Graphical user interfaces, Fiber lasers</p></span>
+            <span data-lang="es">El presente trabajo presenta la incidencia de fenómenos lineales y no lineales en comunicaciones digitales por fibra óptica a través de la implementación de una interfaz gráfica de usuario (GUI) diseñada en el entorno de programación multiparadigma Python, donde se evalúan los fenómenos de atenuación y dispersión lineal. modal considerando la dispersión de velocidad de grupo (GVD) y la dispersión de tercer orden (TOD), junto con el fenómeno no lineal de automodulación de fase (SPM). La metodología consiste en seleccionar un enlace de fibra óptica monomodo bajo el estándar G.652 y variar las condiciones de operación del sistema de comunicación basado en un transmisor Mach-Zehnder (MZM) y una señal modulada por modulación de amplitud digital OOK. Los resultados muestran la dependencia de los efectos lineales y no lineales en la transmisión como función del ancho temporal del pulso gaussiano de entrada y la longitud de onda del láser, observándose que cuanto mayor es la longitud de onda, más afectan los efectos no lineales de la fibra a la comunicación, y que estos efectos pueden mitigarse reduciendo la longitud de onda del láser.
+            <p><strong>Palabras clave:</strong> Fibra óptica, Comunicación por fibra óptica, Transmisores ópticos, Estándares, Dispersión de fibra óptica, Interfaces gráficas de usuario</p>
+            </span>
             <span data-lang="rm">Quest artitgel è derrer d'in mur da pajament. Clicca il DOI per acceder al editur.</span>
           </div>
           <div class="pub-expand-inner">
             <!-- ✏️  DOI link only — no open access PDF -->
-            <a class="pub-btn primary" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+            <a class="pub-btn primary" href="https://doi.org/10.1109/COLCOM52710.2021.9486304" target="_blank">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
               <span data-lang="en" class="visible">Go to DOI</span>
               <span data-lang="es">Ir al DOI</span>
