@@ -742,10 +742,10 @@
         <span data-lang="es">Artículos</span>
         <span data-lang="rm">Artitgels</span>
       </button>
-      <button class="filter-btn" data-filter="preprint">
+      <!-- <button class="filter-btn" data-filter="preprint">
         <span data-lang="en" class="visible">Preprints</span>
         <span data-lang="es">Preprints</span>
-        <span data-lang="rm">Preprints</span>
+        <span data-lang="rm">Preprints</span> -->
       </button>
       <button class="filter-btn" data-filter="book">
         <span data-lang="en" class="visible">Book</span>
@@ -764,7 +764,50 @@
              doi / open-access-url / slides-url
       ═══════════════════════════════════════ -->
 
-      <!-- PUBLICATION 1 — Libro Fibra Óptica -->
+      <!-- PUBLICATION — Time Series Ecomatematico-->
+      <article class="pub-card" data-type="paper">
+        <div class="pub-year">2026</div>
+        <div class="pub-body">
+          <span class="pub-type-tag paper">
+            <span data-lang="en" class="visible">Journal Article</span>
+            <span data-lang="es">Artículo</span>
+            <span data-lang="rm">Artitgel</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible">Analysis of time series classification methods applied in Ford sensor measurements for anomalies detection</span>
+            <span data-lang="es">Análisis de métodos de clasificación de series temporales aplicado a mediciones con sensores Ford en detección de anomalías</span>
+            <span data-lang="rm">Titel da vies segund artitgel</span>
+          </div>
+          <div class="pub-authors"><strong>J. Galvis-Velandia</strong>, D. A. Yáñez-Oyarce, K. C. Puerto-López</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible"><strong>Ecomatemático</strong>, vol. 17(1)</span>
+            <span data-lang="es"><strong>Ecomatemático</strong>, vol. 17(1)</span>
+            <span data-lang="rm"><strong>Ecomatemático</strong>, vol. 17(1)</span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">The following work presents the incidence of linear and non-linear phenomena in digital fiber optic communications through the implementation of a graphical user interface (GUI) designed in the Python multiparadigm programming environment, where the linear attenuation and dispersion phenomena are evaluated. modal considering the group velocity dispersion (GVD) and the third order dispersion (TOD), together with the non-linear phenomenon of phase self-modulation SPM. The methodology consists of selecting a single-mode fiber optic link under the G.652 standard and varying the operating conditions of the communication system based on a Mach-Zehnder (MZM) transmitter and a signal modulated by digital amplitude modulation OOK. The results show the dependence of the linear and non-linear effects in the transmission as a function of the temporal width of the input Gaussian pulse and the wavelength of the laser, when observing that the higher the wavelength the non-linear effects of the fiber affect communication, and that these effects can be mitigated by reducing the wavelength of the laser.
+            <p><strong>Keywords:</strong> Time series classification, K-nearest neighbors, Distance-derived transform, Time random forest, Automotive system</p></span>
+            <span data-lang="es">Este artículo presenta un análisis de métodos de clasificación de series temporales aplicados a mediciones de sensores Ford para la detección de anomalías en subsistemas automotrices. El estudio se centra en distinguir entre series temporales anómalas y normales utilizando dos enfoques de clasificación: k-Vecinos Más Cercanos (kNN) con Distorsión de Tiempo Dinámica Derivada (DTW) como medida de distancia y el clasificador Bosque de Series Temporales (TSF). Cada serie temporal representa 500 mediciones de ruido de motor, recopiladas en condiciones de operación típicas con mínima contaminación acústica. Los resultados proporcionados por ambas técnicas resaltan la importancia de enfatizar patrones globales en series temporales para detectar cambios abruptos en el ruido del motor y clasificar una serie temporal como anómala o normal. Aunque ambas respaldan la misma hipótesis, TSF supera significativamente a kNN con DTW en términos de tiempo de ejecución, así como en Precisión, Recall, Exactitud y F1-Score, en al menos un 11%, debido a su capacidad para capturar mejor los patrones de datos y generalizar.
+            <p><strong>Palabras clave:</strong> Clasificación de series temporales, K-vecinos más cercanos, Transformación derivada de la distancia, Bosque aleatorio de tiempo, Sistema automotriz</p>
+            </span>
+            <span data-lang="rm">Quest artitgel è derrer d'in mur da pajament. Clicca il DOI per acceder al editur.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  DOI link only — no open access PDF -->
+            <a class="pub-btn primary" href="https://doi.org/10.22463/17948231.5722" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              <span data-lang="en" class="visible">Go to DOI</span>
+              <span data-lang="es">Ir al DOI</span>
+              <span data-lang="rm">Ir al DOI</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION — Libro Fibra Óptica -->
       <article class="pub-card" data-type="book">
         <div class="pub-year">2024</div>
         <div class="pub-body">
@@ -832,7 +875,7 @@
         </div>
       </article>
 
-      <!-- PUBLICATION 1 — Entre Ciencie e Ingeniería -->
+      <!-- PUBLICATION — Entre Ciencie e Ingeniería -->
       <article class="pub-card" data-type="paper">
         <div class="pub-year">2022</div>
         <div class="pub-body">
@@ -901,7 +944,7 @@
         </div>
       </article>
 
-      <!-- PUBLICATION 1 — IOP -->
+      <!-- PUBLICATION — IOP -->
       <article class="pub-card" data-type="paper">
         <div class="pub-year">2021</div>
         <div class="pub-body">
@@ -969,7 +1012,7 @@
         </div>
       </article>
 
-      <!-- PUBLICATION 2 — Paywalled (DOI redirect only) -->
+      <!-- PUBLICATION — 2021 COLCOM-->
       <article class="pub-card" data-type="paper">
         <div class="pub-year">2021</div>
         <div class="pub-body">
@@ -1013,28 +1056,32 @@
         </div>
       </article>
 
-      <!-- PUBLICATION 3 — Preprint -->
+      <!-- PUBLICATION — Preprint -->
       <article class="pub-card" data-type="preprint">
-        <div class="pub-year">2024</div>
+        <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pub-type-tag preprint">Preprint</span>
           <div class="pub-title">
-            <span data-lang="en" class="visible">Title of Preprint Paper</span>
-            <span data-lang="es">Título del preprint</span>
+            <span data-lang="en" class="visible">Deciding without validating: disciplinary bias in the use of generative AI for Business Intelligence in Colombia</span>
+            <span data-lang="es">Decisión sin validar: sesgo disciplinar en el uso de IA generativa para Business Intelligence en Colombia</span>
             <span data-lang="rm">Titel dal preprint</span>
           </div>
-          <div class="pub-authors"><strong>[Your Name]</strong>, Co-author D, Co-author E</div>
+          <div class="pub-authors">L. N. Galvis-Velandia,<strong>J. Galvis-Velandia</strong>, C. E. Toloza-Martínez</div>
           <div class="pub-venue">
-            <span data-lang="en" class="visible"><strong>bioRxiv / arXiv / [Server]</strong></span>
-            <span data-lang="es"><strong>bioRxiv / arXiv / [Servidor]</strong></span>
-            <span data-lang="rm"><strong>bioRxiv / arXiv / [Server]</strong></span>
+            <span data-lang="en" class="visible"><strong>Respuestas UFPS</strong></span>
+            <span data-lang="es"><strong>Respuestas UFPS</strong></span>
+            <span data-lang="rm"><strong>Respuestas UFPS</strong></span>
           </div>
         </div>
         <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
         <div class="pub-expand">
           <div class="pub-abstract">
-            <span data-lang="en" class="visible">Brief description of the preprint.</span>
-            <span data-lang="es">Breve descripción del preprint.</span>
+            <span data-lang="en" class="visible">The growing integration of generative artificial intelligence (AI) into Business Intelligence (BI) systems introduces a structural technological risk in organizational decision-making: disciplinary competence bias, defined as the gap between a user's ability to query an AI system and their actual capacity to evaluate the validity of the generated output within a specific business context. This article presents the results of a systematic literature review conducted under the PRISMA 2020 protocol (n = 252 articles, 2020–2026) in Scopus and ScienceDirect, identifying five convergent findings in the international literature: the structural inevitability of bias in large language model outputs, the maturity-expectation gap, the risk of over-reliance, the centrality of disciplinary competence in error detection, and the absence of consolidated AI governance frameworks. These findings are contrasted with the Colombian business context, where low digital maturity (1.75/5 in advanced digital maturity index), an analytical talent deficit of up to 150,000 professionals, and weak data governance policies amplify the identified risks. As a methodological contribution, a two-stage behavioral experiment with cross-evaluation protocol is proposed to empirically measure bias detection capacity as a function of users' disciplinary training level in Colombian organizations.
+            <p><strong>Keywords:</strong> Business Intelligence, data governance, disciplinary bias, epistemic validation, generative artificial intelligence, organizational decision-making</p>
+            </span>
+            <span data-lang="es">La creciente integración de sistemas de inteligencia artificial (IA) generativa en procesos de Business Intelligence (BI) introduce un riesgo tecnológico estructural en la toma de decisiones organizacional: el sesgo de competencia disciplinar, definido como la distancia entre la capacidad de un usuario para consultar un sistema de IA y su capacidad real para evaluar la validez del output generado en el contexto de negocio específico. Este artículo presenta los resultados de una revisión sistemática de literatura realizada con protocolo PRISMA 2020 (n = 252 artículos, 2020–2026) en Scopus y ScienceDirect, identificando cinco convergencias en la literatura internacional: la inevitabilidad estructural del sesgo en outputs de modelos de lenguaje de gran escala, la brecha madurez-expectativa, el riesgo de sobre-dependencia, la centralidad de la competencia disciplinar en la detección de errores y la ausencia de marcos consolidados de gobernanza de IA. Estos hallazgos se contrastan con el contexto empresarial colombiano, donde una madurez digital avanzada de 1,75 sobre 5, un déficit de talento analítico proyectado en 150.000 profesionales y una gobernanza de datos incipiente amplifican los riesgos identificados. Como contribución metodológica, se propone un experimento conductual en dos etapas con protocolo de evaluación cruzada para medir empíricamente la capacidad de detección de sesgo en función del nivel de formación disciplinar de los usuarios en organizaciones colombianas. 
+            <p><strong>Palabras clave:</strong>Business Intelligence, gobierno de datos, sesgo disciplinar, validación epistémica, inteligencia artificial generativa, toma de decisiones organizacional</p>
+            </span>
             <span data-lang="rm">Curta descripziun dal preprint.</span>
           </div>
           <div class="pub-expand-inner">
@@ -1071,9 +1118,9 @@
            data-type = "talk"
       ═══════════════════════════════════════ -->
 
-      <!-- TALK 1 — With slides (hosted in /slides/) -->
+      <!-- TALK 1 — Dossier  2026 -->
       <article class="pub-card" data-type="talk">
-        <div class="pub-year">2024</div>
+        <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pub-type-tag talk">
             <span data-lang="en" class="visible">Conference talk</span>
@@ -1081,17 +1128,17 @@
             <span data-lang="rm">Conferenza</span>
           </span>
           <div class="pub-title">
-            <span data-lang="en" class="visible">Title of Your Conference Talk</span>
-            <span data-lang="es">Título de tu ponencia</span>
+            <span data-lang="en" class="visible"> Organisational Decisions Without Validation: Disciplinary Competence Bias In The Use Of Generative AI For Business Intelligence</span>
+            <span data-lang="es">Decidir sin validar: sesgo disciplinar en el uso de IA generativa para Business Intelligence en Colombia</span>
             <span data-lang="rm">Titel da voss discurs da conferenza</span>
           </div>
-          <div class="pub-authors"><strong>[Your Name]</strong></div>
+          <div class="pub-authors"> L. Galvis-Velandia,<strong>J. Galvis-Velandia</strong>, C. E. Toloza-Martínez</div>
           <div class="pub-venue">
             <span data-lang="en" class="visible">
-              <strong>[Conference Name]</strong> · [City, Country] · [Month Year]
+              <strong>XII International Congress Dossier 2026</strong> · Ocaña, Colombia · May, 2026
             </span>
             <span data-lang="es">
-              <strong>[Nombre del Congreso]</strong> · [Ciudad, País] · [Mes Año]
+              <strong>XII Congreso Internacional Dossier 2026</strong> · Ocaña, Colombia · Mayo, 2026
             </span>
             <span data-lang="rm">
               <strong>[Num dal Congres]</strong> · [Citad, Pajais] · [Mais Onn]
@@ -1101,13 +1148,16 @@
         <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
         <div class="pub-expand">
           <div class="pub-abstract">
-            <span data-lang="en" class="visible">Short description of the talk and its key contribution to the conference discussion.</span>
-            <span data-lang="es">Breve descripción de la ponencia y su contribución principal.</span>
+            <span data-lang="en" class="visible">The growing integration of generative artificial intelligence (AI) into Business Intelligence (BI) systems introduces a structural technological risk in organizational decision-making: disciplinary competence bias, defined as the gap between a user's ability to query an AI system and their actual capacity to evaluate the validity of the generated output within a specific business context. This article presents the results of a systematic literature review conducted under the PRISMA 2020 protocol (n = 252 articles, 2020–2026) in Scopus and ScienceDirect, identifying five convergent findings in the international literature: the structural inevitability of bias in large language model outputs, the maturity-expectation gap, the risk of over-reliance, the centrality of disciplinary competence in error detection, and the absence of consolidated AI governance frameworks. These findings are contrasted with the Colombian business context, where low digital maturity (1.75/5 in advanced digital maturity index), an analytical talent deficit of up to 150,000 professionals, and weak data governance policies amplify the identified risks. As a methodological contribution, a two-stage behavioral experiment with cross-evaluation protocol is proposed to empirically measure bias detection capacity as a function of users' disciplinary training level in Colombian organizations.
+            <p><strong>Keywords:</strong> Business Intelligence, data governance, disciplinary bias, epistemic validation, generative artificial intelligence, organizational decision-making</p></span>
+
+            <span data-lang="es">La creciente integración de sistemas de inteligencia artificial (IA) generativa en procesos de Business Intelligence (BI) introduce un riesgo tecnológico estructural en la toma de decisiones organizacional: el sesgo de competencia disciplinar, definido como la distancia entre la capacidad de un usuario para consultar un sistema de IA y su capacidad real para evaluar la validez del output generado en el contexto de negocio específico. Este artículo presenta los resultados de una revisión sistemática de literatura realizada con protocolo PRISMA 2020 (n = 252 artículos, 2020–2026) en Scopus y ScienceDirect, identificando cinco convergencias en la literatura internacional: la inevitabilidad estructural del sesgo en outputs de modelos de lenguaje de gran escala, la brecha madurez-expectativa, el riesgo de sobre-dependencia, la centralidad de la competencia disciplinar en la detección de errores y la ausencia de marcos consolidados de gobernanza de IA. Estos hallazgos se contrastan con el contexto empresarial colombiano, donde una madurez digital avanzada de 1,75 sobre 5, un déficit de talento analítico proyectado en 150.000 profesionales y una gobernanza de datos incipiente amplifican los riesgos identificados. Como contribución metodológica, se propone un experimento conductual en dos etapas con protocolo de evaluación cruzada para medir empíricamente la capacidad de detección de sesgo en función del nivel de formación disciplinar de los usuarios en organizaciones colombianas. 
+            <p><strong>Palabras clave:</strong>Business Intelligence, gobierno de datos, sesgo disciplinar, validación epistémica, inteligencia artificial generativa, toma de decisiones organizacional</p></span>
             <span data-lang="rm">Curta descripziun dal discurs e sia contribuziun principala.</span>
           </div>
           <div class="pub-expand-inner">
             <!-- ✏️  Host your slides as PDF in a /slides/ folder in the repo -->
-            <a class="pub-btn primary" href="slides/talk1-slides.pdf" target="_blank">
+            <a class="pub-btn primary" href="slides\Presentación Congreso Internacional Dossier.pdf" target="_blank">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
               <span data-lang="en" class="visible">View slides</span>
               <span data-lang="es">Ver diapositivas</span>
@@ -1122,9 +1172,291 @@
         </div>
       </article>
 
-      <!-- TALK 2 — Poster -->
+
+
+
+            <!-- TALK 2 — STEAM  2025 -->
       <article class="pub-card" data-type="talk">
-        <div class="pub-year">2023</div>
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Conference talk</span>
+            <span data-lang="es">Ponencia</span>
+            <span data-lang="rm">Conferenza</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible"> Analysis of time series classification methods applied in anomaly measurements with Ford sensors</span>
+            <span data-lang="es">Análisis de métodos de clasificación de series temporales aplicados en mediciones de anomalías con sensores Ford</span>
+            <span data-lang="rm">Titel da voss discurs da conferenza</span>
+          </div>
+          <div class="pub-authors"> <strong>J. Galvis-Velandia</strong>, D. A. Yáñez-Oyarce, K. C. Puerto-López</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>III Education Congress STEAMEC 2025</strong> · Cúcuta, Colombia · August, 2025
+            </span>
+            <span data-lang="es">
+              <strong>III Education Congress STEAMEC 2025</strong> · Cúcuta, Colombia · Agosto, 2025
+            </span>
+            <span data-lang="rm">
+              <strong>III Education Congress STEAMEC 2025</strong> · Cúcuta, Colombia · Agosto, 2025
+            </span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">
+            In system performance analysis, especially in the automotive industry, monitoring the performance, reliability, and safety of components and processes is crucial. Sensor signals are increasingly used to support preventive maintenance and avoid costly failures or accidents. However, the nonlinear nature, inherent noise, large number of signals and samples, and high frequency of the data make identifying patterns and labeling information complex for both humans and computer systems. To address this challenge, machine learning (ML) models offer an effective alternative by identifying patterns in signals labeled as normal or defective. Traditional classification models rely on measuring distances between data points based on their characteristics, but applying this to time series is not trivial due to variations in frequency, length, noise, and structure. Therefore, specific techniques have been developed to measure distances in time series and extract meaningful features. This work focuses on diagnosing and evaluating the performance of an automotive subsystem by analyzing acoustic signals generated by the engine. Time series classification methods are employed using Ford sensor data to distinguish between normal and anomalous recordings. Two approaches are compared: k-Nearest Neighbors (kNN) with Derivative Dynamic Time Distortion (DTW) as the distance metric, and the Time Series Forest (TSF) classifier. Each analyzed series consists of 500 engine noise measurements taken under normal conditions and with minimal noise pollution. The results show that both methods successfully classify the time series, highlighting the importance of capturing global patterns to detect abrupt changes in engine noise. However, TSF significantly outperforms kNN with DTW in precision, recall, accuracy, F1 score, and runtime, with improvements of at least 11%. This is attributed to its greater ability to generalize and extract relevant patterns from the data. These findings are promising for the industry, as they allow for the early detection of engine or subsystem failures, facilitating more efficient predictive maintenance based on the actual condition of the vehicle, which helps to reduce risks, costs, and downtime.
+            <p><strong>Keywords:</strong> Methods analysis, Anomaly detection, Time series, Machine learning, Dynamic time warping.</p></span>
+
+            <span data-lang="es">En el análisis del rendimiento de sistemas, especialmente en la industria automotriz, es crucial supervisar el rendimiento, la fiabilidad y la seguridad de los componentes y procesos. Las señales de sensores se utilizan cada vez más para apoyar el mantenimiento preventivo y evitar fallos costosos o accidentes. Sin embargo, la naturaleza no lineal, el ruido inherente, la gran cantidad de señales y muestras, y la alta frecuencia de los datos hacen que identificar patrones y etiquetar información resulte complejo tanto para humanos como para sistemas computacionales. Ante este desafío, los modelos de aprendizaje automático (ML) ofrecen una alternativa eficaz al identificar patrones en señales etiquetadas como normales o defectuosas. Los modelos de clasificación tradicionales se basan en la medición de distancias entre datos según sus características, pero aplicar esto a series temporales no es trivial debido a variaciones en frecuencia, longitud, ruido y estructura. Por ello, se han desarrollado técnicas específicas para medir distancias en series temporales y extraer características significativas. Este trabajo se enfoca en diagnosticar y evaluar el rendimiento de un subsistema automotriz mediante el análisis de señales acústicas generadas por el motor. Se emplean métodos de clasificación de series temporales usando datos de sensores de Ford para distinguir entre registros normales y anómalos. Se comparan dos enfoques: k-Vecinos Más Cercanos (kNN) con Distorsión Temporal Dinámica Derivativa (DTW) como métrica de distancia, y el clasificador Bosque de Series Temporales (TSF). Cada serie analizada consta de 500 mediciones de ruido del motor tomadas bajo condiciones normales y con mínima contaminación acústica. Los resultados muestran que ambos métodos logran clasificar con éxito las series temporales, destacando la relevancia de capturar patrones globales para detectar cambios bruscos en el ruido del motor. No obstante, TSF supera considerablemente a kNN con DTW en precisión, recuperación, exactitud, puntuación F1 y tiempo de ejecución, con mejoras de al menos un 11 %. Esto se atribuye a su mayor capacidad para generalizar y extraer patrones relevantes de los datos. Estos hallazgos resultan prometedores para la industria, ya que permiten detectar fallos en motores o subsistemas de forma temprana, facilitando un mantenimiento predictivo más eficiente basado en el estado real del vehículo, lo que contribuye a reducir riesgos, costos y tiempos de inactividad.
+            <p><strong>Palabras clave:</strong>Análisis de métodos, Detección de anomalías, Series temporales, Machine Learning, Dynamic Time Warping.</p></span>
+            <span data-lang="rm">Curta descripziun dal discurs e sia contribuziun principala.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  Host your slides as PDF in a /slides/ folder in the repo -->
+            <a class="pub-btn primary" href="slides\Presentación_ID9.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View slides</span>
+              <span data-lang="es">Ver diapositivas</span>
+              <span data-lang="rm">Vesair slides</span>
+            </a>
+            <!-- ✏️  If the conference has a proceedings DOI -->
+            <!-- <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Proceedings DOI
+            </a> -->
+          </div>
+        </div>
+      </article>
+
+
+
+            <!-- TALK 2 — IV ISSP 2021-->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2021</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Conference Talk</span>
+            <span data-lang="es">Ponencia</span>
+            <span data-lang="rm">Ponencia</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible"> Methodology For The Mathematical Analysis Of Attenuation And Dispersion In Fiber Using A Computational Tool</span>
+            <span data-lang="es">Metodología para el análisis matemático de la atenuación y la dispersión en fibra mediante una herramienta computacional</span>
+            <span data-lang="rm">Titel da voss discurs da conferenza</span>
+          </div>
+          <div class="pub-authors"> <strong>J. Galvis-Velandia</strong>, K. C. Puerto-López, J. J. Ramírez-Mateus</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>2021 IV ISSP International Seminar On Pedagogical Practice</strong> · Cúcuta, Colombia · August, 2025
+            </span>
+            <span data-lang="es">
+              <strong>2021 IV ISSP International Seminar On Pedagogical Practice</strong> · Cúcuta, Colombia · Agosto, 2025
+            </span>
+            <span data-lang="rm">
+              <strong>2021 IV ISSP International Seminar On Pedagogical Practice</strong> · Cúcuta, Colombia · Agosto, 2025
+            </span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">
+            This paper presents the analysis of a WDM communication system in the frequency domain, with the objective of visualising the incidence of the linear phenomena of attenuation and chromatic dispersion, together with the phenomenon of phase self-modulation (SPM), the Kerr Electro-optical effect and fourth-wave mixing (FWM). The analysed system consists of a laser transmitter with a Mach-Zender modulator (MZM) and a standard G.625b single-mode fibre link transmitting three optical signals of 10 mW, 25 mW and 50 mW at a fundamental wavelength of 1550 nm at a rate of 10 Gbps. This system is analysed through a graphical user interface programmed by the authors in the Python environment, which calculates the parameters corresponding to each phenomenon and graphically represents the transmission results at distances of 50 km and 100 km. The analysis methodology consists of varying the spectral separation of the transmitted channels, initially considering a spectral separation of 2 nm and subsequently a spectral separation of 0.2 nm, observing as a result that the harmonics generated by the FWM phenomenon considerably alter the spectral density of the transmitted signals, since the energy of the harmonics is equal to the power of the transmitted signals. On the other hand, with the spectral spacing of 0.2 nm, it is obtained that, although the harmonics alter the spectral density waveform, the bandwidth is not compromised by these additional signals. In conclusion, it is important to consider a minimum spectral separation between each communication channel to preserve the initial signal bandwidth and reduce errors in communication through these systems.
+            <p><strong>Keywords:</strong> Fibre Optics, FWM, GUI, NLSE, WDM</p></span>
+
+            <span data-lang="es">Este artículo presenta el análisis de un sistema de comunicación WDM en el dominio de la frecuencia, con el objetivo de visualizar la incidencia de los fenómenos lineales de atenuación y dispersión cromática, junto con el fenómeno de automodulación de fase (SPM), el efecto electroóptico de Kerr y la mezcla de cuarta onda (FWM). El sistema analizado consta de un transmisor láser con un modulador Mach-Zehnder (MZM) y un enlace de fibra monomodo estándar G.625b que transmite tres señales ópticas de 10 mW, 25 mW y 50 mW a una longitud de onda fundamental de 1550 nm a una velocidad de 10 Gbps. Este sistema se analiza mediante una interfaz gráfica de usuario programada por los autores en el entorno Python, que calcula los parámetros correspondientes a cada fenómeno y representa gráficamente los resultados de la transmisión a distancias de 50 km y 100 km. La metodología de análisis consiste en variar la separación espectral de los canales transmitidos, considerando inicialmente una separación espectral de 2 nm y posteriormente una de 0,2 nm. Como resultado, se observa que los armónicos generados por el fenómeno FWM alteran considerablemente la densidad espectral de las señales transmitidas, dado que la energía de los armónicos es igual a la potencia de las señales transmitidas. Por otro lado, con la separación espectral de 0,2 nm, se obtiene que, si bien los armónicos alteran la forma de onda de la densidad espectral, el ancho de banda no se ve comprometido por estas señales adicionales. En conclusión, es importante considerar una separación espectral mínima entre cada canal de comunicación para preservar el ancho de banda de la señal inicial y reducir los errores de comunicación a través de estos sistemas.
+            <p><strong>Palabras clave:</strong>Fibra Óptica, FWM, GUI, NLSE, WDM.</p></span>
+            <span data-lang="rm">Curta descripziun dal discurs e sia contribuziun principala.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  Host your slides as PDF in a /slides/ folder in the repo -->
+            <a class="pub-btn primary" href="slides\ISPP 2021.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View slides</span>
+              <span data-lang="es">Ver diapositivas</span>
+              <span data-lang="rm">Vesair slides</span>
+            </a>
+            <!-- ✏️  If the conference has a proceedings DOI -->
+            <!-- <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Proceedings DOI
+            </a> -->
+          </div>
+        </div>
+      </article>
+
+            <!-- TALK 2 — I STEAMEC -->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2021</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Conference Talk</span>
+            <span data-lang="es">Ponencia</span>
+            <span data-lang="rm">Ponencia</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible"> Mathematical Analysis Of Geometric Optics In Single-Mode Fibres Through A Graphical Interface</span>
+            <span data-lang="es">Análisis Matemático De La Óptica Geométrica En Fibras Monomodo A Través De Una Interfaz Gráfica</span>
+            <span data-lang="rm">Titel da voss discurs da conferenza</span>
+          </div>
+          <div class="pub-authors"> <strong>J. Galvis-Velandia</strong>, K. C. Puerto-López, J. J. Ramírez-Mateus</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>2021 1st STEAM Education Congress</strong> · Cúcuta, Colombia · June, 2021
+            </span>
+            <span data-lang="es">
+              <strong>2021 1st STEAM Education Congress</strong> · Cúcuta, Colombia · Junio, 2021
+            </span>
+            <span data-lang="rm">
+              <strong>2021 1st STEAM Education Congress</strong> · Cúcuta, Colombia · June, 2021
+            </span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">
+            This article presents the development of a graphical user interface (GUI) that allows for the mathematical analysis of geometric optics phenomena in a light beam transmission scenario through a single-mode fiber optic link. To achieve this, the light wave propagating in the optical fiber is approximated as a two-dimensional vector. Using mathematical modeling of total internal reflection, Snell's law of refraction, and numerical aperture, a computational tool is programmed in an open-source software development language. This tool allows the user to calculate the angle of refraction, the critical angle between the core and cladding of the optical fiber, the maximum aperture angle of the fiber considering the refractive index of the fiber's exterior, and the numerical aperture as a function of the refractive index of the core, cladding, transmission medium, and the angle of incidence outside the link. This graphical interface represents the incident vector within the fiber core striking a horizontal interface that acts as the boundary between the core and the cladding. The refracted or reflected vector, as the case may be, is drawn after the normal vector, symbolized by a vertical axis. The model is validated by studying the relative error between the software output and the analytical results obtained by students in a geometric optics scenario for a single-mode fiber optic link. Results of less than 1% were achieved for each of the program's output variables.
+            <p><strong>Keywords:</strong> Graphical User Interface, Fiber Optics, Geometric Optics, Refractive Index, Free Software</p></span>
+
+            <span data-lang="es">En este artículo, se presenta el desarrollo de una interfaz gráfica de usuario (GUI por Graphic User Interface) que permite analizar matemáticamente el fenómeno de la óptica geométrica en un escenario de transmisión de un haz de luz a través de un enlace de fibra monomodo. Para esto, se considera la aproximación de la onda de luz propagada en la fibra óptica como un vector bidimensional, y mediante el modelado matemático de la ley de reflexión total, la ley de refracción de Snell y la apertura numérica, se programa la herramienta computacional en lenguaje de desarrollo de software libre que permita al usuario calcular el ángulo de refracción, el ángulo crítico entre el núcleo y el revestimiento de la fibra óptica, el ángulo de apertura máxima de la fibra considerando el índice de refracción del exterior de la fibra y la apertura numérica en función del índice de refracción del núcleo, del revestimiento, del medio de transmisión y del ángulo de incidencia fuera del enlace. Esta interfaz gráfica representa el vector incidente dentro del núcleo de la fibra incidiendo sobre una interfaz horizontal que hace las veces de frontera entre el núcleo y el revestimiento, donde el vector refractado o reflejado según sea el caso se dibujará después del vector normal, simbolizado por un eje vertical. La validación del modelo se realiza mediante el estudio del error relativo entre el resultado otorgado por el software y el resultado analítico realizado por estudiantes de un escenario de óptica geométrica en un enlace de fibra óptica monomodo, obteniendo resultados menores al 1% en cada una de las variables de salida del programa.
+            <p><strong>Palabras clave:</strong>Interfaz Gráfica de Usuario, Fibra Óptica, Óptica Geométrica, Índice de refracción, Software Libre</p></span>
+            <span data-lang="rm">Curta descripziun dal discurs e sia contribuziun principala.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  Host your slides as PDF in a /slides/ folder in the repo -->
+            <a class="pub-btn primary" href="slides\Id11_Galvis_Puerto_Ramírez.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View slides</span>
+              <span data-lang="es">Ver diapositivas</span>
+              <span data-lang="rm">Vesair slides</span>
+            </a>
+            <!-- ✏️  If the conference has a proceedings DOI -->
+            <!-- <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Proceedings DOI
+            </a> -->
+          </div>
+        </div>
+      </article>
+
+            <!-- TALK 2 — Math Congress  2021 -->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2021</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Conference Talk</span>
+            <span data-lang="es">Ponencia</span>
+            <span data-lang="rm">Ponencia</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible"> Methodology For The Mathematical Analysis Of Attenuation And Dispersion In Fiber Using A Computational Tool</span>
+            <span data-lang="es">Metodología para el análisis matemático de la atenuación y la dispersión en fibra mediante una herramienta computacional</span>
+            <span data-lang="rm">Titel da voss discurs da conferenza</span>
+          </div>
+          <div class="pub-authors"> <strong>J. Galvis-Velandia</strong>, K. C. Puerto-López, J. J. Ramírez-Mateus</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>2021 V International Meeting on Mathematics Education</strong> · Cúcuta, Colombia · May, 2021
+            </span>
+            <span data-lang="es">
+              <strong>2021 V International Meeting on Mathematics Education</strong> · Cúcuta, Colombia · Mayo, 2021
+            </span>
+            <span data-lang="rm">
+              <strong>2021 V International Meeting on Mathematics Education</strong> · Cúcuta, Colombia · Mayo, 2021
+            </span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">
+            This paper presents the development of a graphical user interface (GUI) that allows to mathematically analyze the linear effects of attenuation and dispersion present in the optical fiber from a mathematical analysis, which consists of the initial modeling of the Nonlinear Schrödinger Equation (NLSE), considering the phenomenon of attenuation as a function of the length of the optical fiber link, the group velocity dispersion (GVD for Group Velocity Delay) and the third order dispersion (TOD for Third Order Dispersion). For the solution of the project, a light pulse modeled as a Gaussian pulse in the time domain under the effect of an input chirp factor produced by the optical transmitter is assumed as the incident signal at the initial end. Subsequently, the optical fiber is modeled as a transfer function in the angular frequency domain to obtain the output function in the fiber in the time and angular frequency domain by applying Fourier Transform and the convolution theorem. With the mathematical analysis, the graphical interface is built using a specialized programming environment accepted by the scientific community and the analytical model is tested by simulating a typical optical communications scenario that allows visualizing the modeled effects on the output optical signal in the time domain and in the frequency domain, allowing understanding the transmission process of digital signals modulated by laser and obtaining the numerical and graphical values that allow evaluating the signal transmitted in optical fiber.
+            <p><strong>Keywords:</strong> Graphic User Interface, Fiber Optic, Dispersion, Attenuation, Fourier Transform</p></span>
+
+            <span data-lang="es">Este artículo presenta el desarrollo de una interfaz gráfica de usuario (GUI) que permite analizar matemáticamente los efectos lineales de atenuación y dispersión presentes en la fibra óptica a partir de un análisis matemático, que consiste en el modelado inicial de la ecuación de Schrödinger no lineal (NLSE), considerando el fenómeno de atenuación como función de la longitud del enlace de fibra óptica, la dispersión de velocidad de grupo (GVD por Group Velocity Delay) y la dispersión de tercer orden (TOD por Third Order Dispersion). Para la solución del proyecto, se asume un pulso de luz modelado como un pulso gaussiano en el dominio del tiempo bajo el efecto de un factor de chirp de entrada producido por el transmisor óptico como señal incidente en el extremo inicial. Posteriormente, la fibra óptica se modela como una función de transferencia en el dominio de la frecuencia angular para obtener la función de salida en la fibra en el dominio del tiempo y la frecuencia angular mediante la aplicación de la transformada de Fourier y el teorema de convolución. Mediante el análisis matemático, se construye la interfaz gráfica utilizando un entorno de programación especializado aceptado por la comunidad científica y se prueba el modelo analítico simulando un escenario típico de comunicaciones ópticas que permite visualizar los efectos modelados en la señal óptica de salida en el dominio del tiempo y en el dominio de la frecuencia, lo que permite comprender el proceso de transmisión de señales digitales moduladas por láser y obtener los valores numéricos y gráficos que permiten evaluar la señal transmitida en la fibra óptica.
+            <p><strong>Palabras clave:</strong>Interfaz gráfica de usuario, fibra óptica, dispersión, atenuación, transformada de Fourier</p></span>
+            <span data-lang="rm">Curta descripziun dal discurs e sia contribuziun principala.</span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  Host your slides as PDF in a /slides/ folder in the repo -->
+            <a class="pub-btn primary" href="slides\Congreso de Matemáticas.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View slides</span>
+              <span data-lang="es">Ver diapositivas</span>
+              <span data-lang="rm">Vesair slides</span>
+            </a>
+            <!-- ✏️  If the conference has a proceedings DOI -->
+            <!-- <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Proceedings DOI
+            </a> -->
+          </div>
+        </div>
+      </article>
+
+            <!-- TALK 2 — RedColsi  2020 -->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2020</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Conference Talk</span>
+            <span data-lang="es">Ponencia</span>
+            <span data-lang="rm">Ponencia</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible"> Exploration of research advances in Digital Communication Systems based on Optical Fiber for transmission in 4G and 5G Networks</span>
+            <span data-lang="es">Exploración de los avances de investigación en Sistemas de Comunicación Digitales basados en Fibra Óptica para transmisión en Redes 4G y 5G</span>
+            <span data-lang="rm">Titel da voss discurs da conferenza</span>
+          </div>
+          <div class="pub-authors"> <strong>J. Galvis-Velandia</strong>, K. C. Puerto-López</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>2020 VI Encuentro Regional de Semilleros de Investigación</strong> · Cúcuta, Colombia · October, 2020
+            </span>
+            <span data-lang="es">
+              <strong>2020 VI Encuentro Regional de Semilleros de Investigación</strong> · Cúcuta, Colombia · Octubre, 2020
+            </span>
+            <span data-lang="rm">
+              <strong>2020 VI Encuentro Regional de Semilleros de Investigación</strong> · Cúcuta, Colombia · Octubre, 2020
+            </span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">
+            This research explores advances in fiber optic-based digital communication systems for 4G and 5G network transmission. The study addresses a gap in the literature regarding connection topologies for optical communication systems applied to these networks. Using a state-of-the-art review methodology, the research characterizes developments at international, national, and regional levels. Key studies analyzed include bidirectional fiber-wireless access for 5G, hybrid FSO/RF systems under adverse weather conditions, optical transport network design for fixed wireless access, and nonlinear phenomena modeling in fiber optic transmission. The findings conclude that fiber optics is a growing research field, that Colombia's contributions are keeping pace with international developments, and that systematizing this knowledge will benefit future researchers in optical communications.
+            <p><strong>Keywords:</strong> Fiber optics · 5G networks · 4G networks · Digital communication systems · FSO/RF systems · Optical transmission · State of the art · Radio over fiber</p></span>
+
+            <span data-lang="es">Esta investigación explora los avances en sistemas de comunicación digital basados en fibra óptica para redes 4G y 5G. El estudio aborda la falta de conceptualización sobre topologías de conexión en la bibliografía disponible. Mediante una revisión del estado del arte en los ámbitos internacional, nacional y regional, se analizan trabajos sobre acceso fibra-inalámbrico bidireccional, sistemas híbridos FSO/RF, diseño de redes de transporte óptico y modelado de fenómenos no lineales en fibra. Las conclusiones destacan que la fibra óptica es un área en auge y que Colombia genera conocimiento al nivel internacional en este campo.
+            <p><strong>Palabras clave:</strong>Fibra óptica · Redes 5G · Redes 4G · Sistemas de comunicación digital · Sistemas FSO/RF · Transmisión óptica · Estado del arte · Radio sobre fibra</p></span>
+            <span data-lang="rm">Esta investigación explora los avances en sistemas de comunicación digital basados en fibra óptica para redes 4G y 5G. El estudio aborda la falta de conceptualización sobre topologías de conexión en la bibliografía disponible. Mediante una revisión del estado del arte en los ámbitos internacional, nacional y regional, se analizan trabajos sobre acceso fibra-inalámbrico bidireccional, sistemas híbridos FSO/RF, diseño de redes de transporte óptico y modelado de fenómenos no lineales en fibra. Las conclusiones destacan que la fibra óptica es un área en auge y que Colombia genera conocimiento al nivel internacional en este campo.
+            <p><strong>Pleds-clav:</strong>Fibra optica · Rets 5G · Rets 4G · Sistems da communicaziun digitala · Sistems FSO/RF · Transmissiun optica · Stadi da l'art · Radio sin fibra</p></span>
+          </div>
+          <div class="pub-expand-inner">
+            <!-- ✏️  Host your slides as PDF in a /slides/ folder in the repo -->
+            <a class="pub-btn primary" href="slides\Congreso de Matemáticas.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View slides</span>
+              <span data-lang="es">Ver diapositivas</span>
+              <span data-lang="rm">Vesair slides</span>
+            </a>
+            <!-- ✏️  If the conference has a proceedings DOI -->
+            <!-- <a class="pub-btn" href="https://doi.org/10.xxxx/xxxxx" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Proceedings DOI
+            </a> -->
+          </div>
+        </div>
+      </article>
+
+
+      <!-- TALK 2 — Poster DC/DC -->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2020</div>
         <div class="pub-body">
           <span class="pub-type-tag talk">
             <span data-lang="en" class="visible">Poster</span>
@@ -1132,31 +1464,87 @@
             <span data-lang="rm">Poster</span>
           </span>
           <div class="pub-title">
-            <span data-lang="en" class="visible">Title of Your Poster Presentation</span>
-            <span data-lang="es">Título de tu presentación de póster</span>
+            <span data-lang="en" class="visible">Analysis of the behaviour in MCC and MCD for a high-gain DC-DC boost converter dependent on a low duty cycle</span>
+            <span data-lang="es">Análisis del comportamiento en MCC y MCD para un convertidor elevador de alta ganancia CC-CC dependiente de un bajo ciclo de trabajo</span>
             <span data-lang="rm">Titel da vossa presentaziun da poster</span>
           </div>
-          <div class="pub-authors"><strong>[Your Name]</strong>, Co-presenter</div>
+          <div class="pub-authors"><strong>J.Galvis-Velandia</strong>, R. Velásquez-Gómez</div>
           <div class="pub-venue">
             <span data-lang="en" class="visible">
-              <strong>[Conference Name]</strong> · [City, Country] · [Month Year]
+              <strong>2020 7th International Week of Science, Technology a Innovation</strong> · Cúcuta, Colombia · July, 2020
             </span>
             <span data-lang="es">
-              <strong>[Nombre del Congreso]</strong> · [Ciudad, País] · [Mes Año]
+              <strong>2020 7th International Week of Science, Technology a Innovation</strong> · Cúcuta, Colombia · Julio, 2020
             </span>
             <span data-lang="rm">
-              <strong>[Num dal Congres]</strong> · [Citad, Pajais] · [Mais Onn]</span>
+              <strong>2020 7th International Week of Science, Technology a Innovation</strong> · Cúcuta, Colombia · Julio, 2020</span>
           </div>
         </div>
         <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
         <div class="pub-expand">
           <div class="pub-abstract">
-            <span data-lang="en" class="visible">Short summary of the poster's topic and findings.</span>
-            <span data-lang="es">Breve resumen del tema y hallazgos del póster.</span>
-            <span data-lang="rm">Curta resumaziun dal tema e dals resultats dal poster.</span>
+            <span data-lang="en" class="visible">Nowadays, the development of switching, conversion and energy transfer systems has become indispensable for the scientific community due to its applicability in different scenarios of human life. In the area of Power Electronics, which is responsible for the analysis and design of high-power electrical energy transfer systems, direct current to direct current (DC/DC) converters are found, which are extensively used in switching-mode regulated DC power supply systems, motor drive applications, photovoltaic electrical systems, among others. Given the importance mentioned above, this project seeks the mathematical model of a high voltage gain DC/DC boost converter dependent on a minimum duty cycle, based on Circuit Theory, which allows understanding the behavior of the system and its efficiency in terms of voltage, current and electrical power, together with the mathematical expressions that enable the design of electrical systems adjusted to different needs based on the same implemented topology, both for Continuous Conduction Mode (CCM) and Discontinuous Conduction Mode (DCM).
+            <p><strong>Keywords:</strong> Power Electronics • DC/DC Boost Converter • Continuous/Discontinuous Conduction Mode • Duty Cycle • High Voltage Gain • Efficiency</p></span>
+
+            <span data-lang="es">En la actualidad, el desarrollo de sistemas de conmutación, conversión y transferencia de energía se ha convertido en algo indispensable para la comunidad científica debido a su aplicabilidad en diferentes escenarios de la vida del hombre. Ahora bien, en el área de le Electrónica de Potencia, que se encarga en el análisis y diseño de sistemas de transferencia de energía eléctrica de alta potencia, se encuentran los convertidores de corriente continua a corriente continua (CC/CC), los cuales, se usan extensamente en sistemas de suministro de energía CC regulados de modo de conmutación, en aplicaciones de accionamientos motrices, en sistemas eléctricos fotovoltaicos, entre otros. Con la importancia mencionada anteriormente, este proyecto busca el modelo matemático de un convertidor elevador de alta ganancia de voltaje CC/CC dependiente de un ciclo de trabajo mínimo, basado en la Teoría de Circuitos que permita comprender el comportamiento del sistema y la eficiencia en materia de voltaje, corriente y potencia eléctrica, junto con las expresiones matemáticas que permitan el diseño de sistemas eléctricos que se ajusten a diferentes necesidades basados en la misma topología implementada, tanto para el modo de operación en corriente continua (MCC) como para el modo de operación en corriente discontinua (MCD).
+            <p><strong>Palabras clave:</strong> Electrónica de Potencia • Convertidor elevador CC/CC • Corriente Continua/Corriente Discontinua •  Ciclo de trabajo •  Alta ganancia de voltaje. •  Eficiencia.</p>
+            </span>
+            <span data-lang="rm">Oz en di, il svilup da sistems da commutaziun, conversiun e transferiment d'energia è daventà insumma imprescindibel per la communanza scientifica, grazia a sia applicabilitad en differents scenaris da la vita umana. En il champ da l'Electronica da Potenza, che s'occupa da l'analisa e dal design da sistems da transferiment d'energia electrica da alta potenza, sa chattan ils convertiders da current continu a current continu (CC/CC), ils quals vegnan duvrats extensivamain en sistems da furnida d'energia CC regulads en modus da commutaziun, en applicaziuns d'acziunament motoric, en sistems electrics fotovoltaics ed auter. Cun l'importanza menziunada sura, quest project tscherca il model matemàtic d'in convertider elevatur CC/CC d'alta gudagna da voltadi dipendent d'in cicle da lavur minimal, basà sin la Teoria da Circuids, che permetta da chapir il cumportament dal sistem e l'efficienza en materia da voltadi, current e potenza electrica, ensemen cun las expressiuns matemàticas che permettan il design da sistems electrics che s'adattan a differentas basognaments, fundads sin la medema topologia implementada, tant per il Modus da Conducziun Continua (MCC) sco er per il Modus da Conducziun Discontinua (MCD).
+            <p><strong>Pleds-clav:</strong> Electronica da Potenza • Convertider Elevatur CC/CC • Conducziun Continua/Discontinua • Cicle da Lavur • Alta Gudagna da Voltadi • Efficienza</p>              
+            </span>
           </div>
           <div class="pub-expand-inner">
-            <a class="pub-btn primary" href="slides/poster1.pdf" target="_blank">
+            <a class="pub-btn primary" href="slides\Poster RedCOLSI.pdf" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span data-lang="en" class="visible">View poster</span>
+              <span data-lang="es">Ver póster</span>
+              <span data-lang="rm">Vesair poster</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+            <!-- TALK 2 — Poster 4G/5G -->
+      <article class="pub-card" data-type="talk">
+        <div class="pub-year">2020</div>
+        <div class="pub-body">
+          <span class="pub-type-tag talk">
+            <span data-lang="en" class="visible">Poster</span>
+            <span data-lang="es">Póster</span>
+            <span data-lang="rm">Poster</span>
+          </span>
+          <div class="pub-title">
+            <span data-lang="en" class="visible">Analysis of the behaviour in MCC and MCD for a high-gain DC-DC boost converter dependent on a low duty cycle</span>
+            <span data-lang="es">Análisis del comportamiento en MCC y MCD para un convertidor elevador de alta ganancia CC-CC dependiente de un bajo ciclo de trabajo</span>
+            <span data-lang="rm">Titel da vossa presentaziun da poster</span>
+          </div>
+          <div class="pub-authors"><strong>J.Galvis-Velandia</strong>, R. Velásquez-Gómez</div>
+          <div class="pub-venue">
+            <span data-lang="en" class="visible">
+              <strong>2020  XXIII Encuentro Nacional y XVII Encuentro Internacional de Semilleros</strong> · Cúcuta, Colombia · November, 2020
+            </span>
+            <span data-lang="es">
+              <strong>2020  XXIII Encuentro Nacional y XVII Encuentro Internacional de Semilleros</strong> · Cúcuta, Colombia · Noviembre, 2020
+            </span>
+            <span data-lang="rm">
+              <strong>2020  XXIII Encuentro Nacional y XVII Encuentro Internacional de Semilleros</strong> · Cúcuta, Colombia · Noviembre, 2020</span>
+          </div>
+        </div>
+        <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="pub-expand">
+          <div class="pub-abstract">
+            <span data-lang="en" class="visible">Currently, optical communication networks provide support for a wide range of communication services in scenarios such as residential, business and mobile services, among others. The growth of these networks is accompanied by the rise of Fifth Generation (5G) technology, which is estimated to be used by 100 billion devices worldwide by 2025. This project seeks to highlight the state of the art of fiber optic communication systems implemented for 4G and 5G applications. The methodology covers four stages: delimitation of connection topologies, international projects based on fiber optics for 4G and 5G networks, national applications, and regional research development in Norte de Santander, followed by a comparative analysis and dissemination of results. The project concludes that fiber optics is a growing research field due to its applicability in analog and digital communication systems, that systematizing its state of the art will give future researchers a complete overview of this technology's development, and that knowledge generation in Colombia, including Norte de Santander, keeps pace with international research on this subject.
+            <p><strong>Keywords:</strong> Fiber Optics • 4G/5G Networks • Digital Communication Systems • FSO/RF Systems • State of the Art • Radio over Fiber • Optical Transmission • Single-mode Fiber</p></span>
+
+            <span data-lang="es">En la actualidad, las redes de comunicación ópticas suponen un soporte para una amplia gama de servicios de comunicación en escenarios tales como servicios residenciales, empresariales y móviles, entre otros. El auge de estas redes viene acompañado por el crecimiento de la tecnología de Quinta Generación (5G), la cual se estima que será utilizada por 100.000 millones de dispositivos en todo el mundo para el año 2025. El presente proyecto busca resaltar el estado del arte de los sistemas de comunicación de fibra óptica implementados para aplicaciones de 4G y 5G. La metodología comprende cuatro etapas: delimitación de topologías de conexión, proyectos internacionales basados en fibra óptica para redes 4G y 5G, aplicaciones nacionales y desarrollo de investigación regional en Norte de Santander, seguido de un análisis comparativo y divulgación de resultados. El proyecto concluye que la fibra óptica es un área de investigación en auge por su aplicabilidad en sistemas de comunicaciones analógos y digitales, que la sistematización de su estado del arte permitirá a futuros investigadores adquirir una visión completa del desarrollo de esta tecnología, y que la generación de conocimiento en Colombia, incluyendo Norte de Santander, va a la par con los trabajos realizados a nivel internacional sobre esta temática.
+            <p><strong>Palabras clave:</strong> Fibra Óptica • Redes 4G/5G • Sistemas de Comunicación Digital • Sistemas FSO/RF • Estado del Arte • Radio sobre Fibra • Transmisión Óptica • Fibra Monomodo</p>
+            </span>
+            <span data-lang="rm">Oz en di, las rets da communicaziun opticas furnescha in support per ina vasta gamma da servetschs da communicaziun en scenaris sco servetschs residenzials, commerzials e mobils, tranter auters. La creschida da questas rets è accumpagnada dal svilup da la tecnologia da Quinta Generaziun (5G), la quala vegn stimada da vegnir duvrada da 100 miliardas da dispositivs en tut il mund fin l'onn 2025. Quest project tscherca da relevar il stadi da l'art dals sistems da communicaziun da fibra optica implementads per applicaziuns 4G e 5G. La metodologia cuvra quatter etappas: delimitaziun da topologias da connexiun, projects internaziunals basads sin fibra optica per rets 4G e 5G, applicaziuns naziunalas e svilup da perscrutaziun regional en Norte de Santander, suandà d'ina analisa cumparativa e divulgaziun dals resultats. Il project concluda che la fibra optica è in champ da perscrutaziun en creschida, che la sistematisaziun dal stadi da l'art dará als futuers perscrutaders ina visiun cumpletta dal svilup da questa tecnologia, e che la generaziun da enconuschientschas en Colombia, inclusiv Norte de Santander, va a par cun la perscrutaziun internaziunala sin questa tematica.
+            <p><strong>Pleds-clav:</strong> Fibra Optica • Rets 4G/5G • Sistems da Communicaziun Digitala • Sistems FSO/RF • Stadi da l'Art • Radio sin Fibra • Transmissiun Optica • Fibra Monomoda</p>              
+            </span>
+          </div>
+          <div class="pub-expand-inner">
+            <a class="pub-btn primary" href="slides\Poster RedCOLSI.pdf" target="_blank">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
               <span data-lang="en" class="visible">View poster</span>
               <span data-lang="es">Ver póster</span>
@@ -1207,9 +1595,9 @@
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer>
   <span>
-    <span data-lang="en" class="visible">© 2025 [Your Name]. Built with plain HTML — hosted on GitHub Pages.</span>
-    <span data-lang="es">© 2025 [Tu Nombre]. Construido con HTML — alojado en GitHub Pages.</span>
-    <span data-lang="rm">© 2025 [Voss Num]. Construì cun HTML — alugià sin GitHub Pages.</span>
+    <span data-lang="en" class="visible">© 2026 J. Galvis-Velandia. Built with plain HTML — hosted on GitHub Pages.</span>
+    <span data-lang="es">© 2026 J. Galvis-Velandia. Construido con HTML — alojado en GitHub Pages.</span>
+    <span data-lang="rm">© 2026 J. Galvis-Velandia. Construì cun HTML — alugià sin GitHub Pages.</span>
   </span>
   <a href="https://orcid.org/0000-0002-2190-010X" target="_blank" style="color:var(--fade);text-decoration:none;">
     ORCID 0000-0002-2190-010X
