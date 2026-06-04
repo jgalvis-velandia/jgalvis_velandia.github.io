@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scientific CV — [Your Name]</title>
+  <title>Scientific CV — J. Galvis-Velandia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
@@ -578,6 +578,98 @@
     }
 
     .hero-tagline { animation-delay: .12s; }
+
+    /* ─── Work Experience ─── */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .exp-item {
+      border-top: 1px solid var(--rule);
+      padding: 1.8rem 0;
+      display: grid;
+      grid-template-columns: 5rem 1fr;
+      gap: 1.5rem;
+    }
+
+    .exp-period {
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: var(--fade);
+      line-height: 1.6;
+      padding-top: .25rem;
+    }
+
+    .exp-body {}
+
+    .exp-role {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: .3rem;
+    }
+
+    .exp-org {
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      color: var(--accent2);
+      margin-bottom: .7rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      flex-wrap: wrap;
+    }
+
+    .exp-org-sep {
+      color: var(--rule);
+    }
+
+    .exp-badge {
+      font-size: .62rem;
+      letter-spacing: .1em;
+      border: 1px solid var(--accent2);
+      padding: .1rem .4rem;
+      border-radius: 2px;
+      color: var(--accent2);
+    }
+
+    .exp-desc {
+      font-size: .9rem;
+      color: #5a5248;
+      line-height: 1.75;
+    }
+
+    .exp-desc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+
+    .exp-desc ul li {
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .exp-desc ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rule);
+      font-family: var(--mono);
+    }
+
+    @media (max-width: 680px) {
+      .exp-item { grid-template-columns: 1fr; gap: .5rem; }
+      .exp-period { padding-top: 0; }
+    }
   </style>
 </head>
 <body>
@@ -604,6 +696,11 @@
       <span data-lang="en" class="visible">Talks</span>
       <span data-lang="es">Ponencias</span>
       <span data-lang="rm">Conferenzas</span>
+    </a></li>
+    <li><a href="#experience">
+      <span data-lang="en" class="visible">Experience</span>
+      <span data-lang="es">Experiencia</span>
+      <span data-lang="rm">Experientscha</span>
     </a></li>
     <li><a href="#contact">
       <span data-lang="en" class="visible">Contact</span>
@@ -676,8 +773,7 @@
           <p>Tengo un [título] de [Universidad] y he colaborado con grupos de investigación en [países/instituciones]. Mi trabajo ha sido publicado en [revistas o eventos notables].</p>
         </div>
         <div data-lang="rm">
-          <p>Jau sun retschertader/a a [Instituziun], lavurant en [champ da retschertga]. Mia lavur sa concentrescha sin [focus specific], cun interess particular en [temas u metodas].</p>
-          <p>Hai in [grad] da [Universitad] ed hai collavurà cun grupps da retschertga en [pajais/instituziuns].</p>
+          <p>Inschigner electronic da la Universidad Francisco de Paula Santander (Colombia, 2021) e Master en Inschigneria Computaziunala e Sistems Intelligents da la UPV/EHU (San Sebastián, Spagna). Pli che quatter onns d'experientscha professiunala en Business Intelligence ed analisa da datas tar Ecopetrol, manament da transformaziun digitala tar CENS, e retschertga d'IA tar Vicomtech, nua ch'jau hai lavurà sin l'adaptaziun da domeni per la detecziun da objects 3D cun LiDAR applitgà a la conducziun autonoma.</p>
         </div>
       </div>
       <div class="about-stats">
@@ -688,7 +784,7 @@
             <span data-lang="es">Afiliación</span>
             <span data-lang="rm">Affiliaziun</span>
           </div>
-          <div class="stat-value">[Institution Name]</div>
+          <div class="stat-value">Universidad Francisco de Paula Santander</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">
@@ -1466,7 +1562,7 @@
           <div class="pub-title">
             <span data-lang="en" class="visible">Analysis of the behaviour in MCC and MCD for a high-gain DC-DC boost converter dependent on a low duty cycle</span>
             <span data-lang="es">Análisis del comportamiento en MCC y MCD para un convertidor elevador de alta ganancia CC-CC dependiente de un bajo ciclo de trabajo</span>
-            <span data-lang="rm">Titel da vossa presentaziun da poster</span>
+            <span data-lang="rm">Analisa dal cumportament en MCC e MCD d'in convertider elevatur CC-CC d'alta gudagna dependenta d'in cicle da lavur bass</span>
           </div>
           <div class="pub-authors"><strong>J.Galvis-Velandia</strong>, R. Velásquez-Gómez</div>
           <div class="pub-venue">
@@ -1477,7 +1573,7 @@
               <strong>2020 7th International Week of Science, Technology a Innovation</strong> · Cúcuta, Colombia · Julio, 2020
             </span>
             <span data-lang="rm">
-              <strong>2020 7th International Week of Science, Technology a Innovation</strong> · Cúcuta, Colombia · Julio, 2020</span>
+              <strong>2020 7th International Week of Science, Technology a Innovation</strong> · Cúcuta, Colombia · July, 2020</span>
           </div>
         </div>
         <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -1514,9 +1610,9 @@
             <span data-lang="rm">Poster</span>
           </span>
           <div class="pub-title">
-            <span data-lang="en" class="visible">Analysis of the behaviour in MCC and MCD for a high-gain DC-DC boost converter dependent on a low duty cycle</span>
-            <span data-lang="es">Análisis del comportamiento en MCC y MCD para un convertidor elevador de alta ganancia CC-CC dependiente de un bajo ciclo de trabajo</span>
-            <span data-lang="rm">Titel da vossa presentaziun da poster</span>
+            <span data-lang="en" class="visible">Analysis of Digital Communication Systems based on Fiber Optics for transmission in 4G and 5G Networks</span>
+            <span data-lang="es">Análisis de los Sistemas de Comunicaciones Digitales basados en Fibra Óptica para transmisión en Redes 4G y 5G</span>
+            <span data-lang="rm">Analisa da systems da communicaziun digitala sin basa da fibra ottica per la trans misiun en connexiuns 4G e 5G</span>
           </div>
           <div class="pub-authors"><strong>J.Galvis-Velandia</strong>, R. Velásquez-Gómez</div>
           <div class="pub-venue">
@@ -1527,7 +1623,7 @@
               <strong>2020  XXIII Encuentro Nacional y XVII Encuentro Internacional de Semilleros</strong> · Cúcuta, Colombia · Noviembre, 2020
             </span>
             <span data-lang="rm">
-              <strong>2020  XXIII Encuentro Nacional y XVII Encuentro Internacional de Semilleros</strong> · Cúcuta, Colombia · Noviembre, 2020</span>
+              <strong>2020  XXIII Encuentro Nacional y XVII Encuentro Internacional de Semilleros</strong> · Cúcuta, Colombia · November, 2020</span>
           </div>
         </div>
         <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -1557,12 +1653,232 @@
     </div><!-- /pub-list talks -->
   </section>
 
+  <!-- ── WORK EXPERIENCE ── -->
+  <section id="experience">
+    <div class="section-label">
+      <span data-lang="en" class="visible">04 — Work Experience</span>
+      <span data-lang="es">04 — Experiencia Laboral</span>
+      <span data-lang="rm">04 — Experientscha professiunala</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="visible">Professional trajectory</span>
+      <span data-lang="es">Trayectoria profesional</span>
+      <span data-lang="rm">Trajetg professiunal</span>
+    </h2>
+
+    <div class="exp-list">
+
+      <!-- 1 — Lead of Digital Transformation · CENS -->
+      <div class="exp-item">
+        <div class="exp-period">2025<br>2026</div>
+        <div class="exp-body">
+          <div class="exp-role">
+            <span data-lang="en" class="visible">Lead of Digital Transformation</span>
+            <span data-lang="es">Líder de Transformación Digital</span>
+            <span data-lang="rm">Manader da Transformaziun Digitala</span>
+          </div>
+          <div class="exp-org">
+            CENS
+            <span class="exp-org-sep">·</span>
+            <span data-lang="en" class="visible">Cúcuta, Colombia</span>
+            <span data-lang="es">Cúcuta, Colombia</span>
+            <span data-lang="rm">Cúcuta, Colombia</span>
+          </div>
+          <div class="exp-desc">
+            <ul>
+              <div data-lang="en" class="visible">
+                <li>Developed end-to-end data pipelines, including data ingestion from heterogeneous sources, data transformation (ETL), and structured modeling for analytics.</li>
+                <li>Designed and deployed AI-driven solutions for process optimization, including conversational and task-oriented agents to enhance operational workflows.</li>
+                <li>Defined and computed key performance indicators (KPIs) to support data-driven decision-making and performance tracking.</li>
+              </div>
+              <div data-lang="es">
+                <li>Desarrollo de pipelines de datos de extremo a extremo, incluyendo ingesta de fuentes heterogéneas, transformación de datos (ETL) y modelado estructurado para analítica.</li>
+                <li>Diseño e implementación de soluciones de IA para optimización de procesos, incluyendo agentes conversacionales y orientados a tareas para mejorar flujos operativos.</li>
+                <li>Definición y cálculo de indicadores clave de desempeño (KPIs) para respaldar la toma de decisiones basada en datos y el seguimiento del rendimiento.</li>
+              </div>
+              <div data-lang="rm">
+                <li>Svilup da pipelines da datas da fin a fin, inclusiv ingestiun da funtaunas heterogenas, transformaziun da datas (ETL) e modelaziun structurada per analitica.</li>
+                <li>Design ed implement da soluziuns d'IA per l'optimaziun da process, inclusiv agents conversaziunals ed orientads a taschas per meglierar ils fluxs operativs.</li>
+                <li>Definiziun e calculaziun da indicaturs clav da prestaziun (KPI) per sustegnair la decisiun basada sin datas e il monitoring da la prestaziun.</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 — Technology & Strategy Lead · Academia Mundo Marketing -->
+      <div class="exp-item">
+        <div class="exp-period">2025<br>
+          <span data-lang="en" class="visible">Current</span>
+          <span data-lang="es">Actual</span>
+          <span data-lang="rm">Actual</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-role">
+            <span data-lang="en" class="visible">Technology &amp; Strategy Lead — AI &amp; Automation</span>
+            <span data-lang="es">Líder de Tecnología y Estrategia — IA y Automatización</span>
+            <span data-lang="rm">Manader da Tecnologia e Strategia — IA e Automatisaziun</span>
+          </div>
+          <div class="exp-org">
+            Academia Mundo Marketing
+            <span class="exp-org-sep">·</span>
+            <span data-lang="en" class="visible">Cúcuta, Colombia</span>
+            <span data-lang="es">Cúcuta, Colombia</span>
+            <span data-lang="rm">Cúcuta, Colombia</span>
+            <span class="exp-badge">
+              <span data-lang="en" class="visible">Staff responsibility</span>
+              <span data-lang="es">Responsabilidad de personal</span>
+              <span data-lang="rm">Responsabladad da persunal</span>
+            </span>
+          </div>
+          <div class="exp-desc">
+            <ul>
+              <div data-lang="en" class="visible">
+                <li>Design and administration of databases and development of automation processes to optimise academic and commercial management.</li>
+                <li>Creation of an Artificial Intelligence Agent focused on prospecting and marketing, increasing efficiency in lead generation.</li>
+                <li>Standardisation of operational and strategic processes, establishing clear KPIs and measurement methodologies for each area.</li>
+                <li>Decision-making in human talent management, including recruitment, job assignment, and performance evaluation.</li>
+              </div>
+              <div data-lang="es">
+                <li>Diseño y administración de bases de datos y desarrollo de procesos de automatización para optimizar la gestión académica y comercial.</li>
+                <li>Creación de un Agente de Inteligencia Artificial enfocado en prospección y marketing, incrementando la eficiencia en la generación de leads.</li>
+                <li>Estandarización de procesos operativos y estratégicos, estableciendo KPIs claros y metodologías de medición para cada área.</li>
+                <li>Toma de decisiones en la gestión del talento humano, incluyendo reclutamiento, asignación de cargos y evaluación del desempeño.</li>
+              </div>
+              <div data-lang="rm">
+                <li>Design ed administraziun da bancas da datas e svilup da process d'automatisaziun per optimisar la gestiun academica e commerciala.</li>
+                <li>Creaziun d'in Agent d'Intelligenza Artificiala orientà a la prospecziun e al marketing, augmentond l'efficienza en la generaziun da leads.</li>
+                <li>Standardisaziun dals process operativs e strategics, stabilind KPIs claras e metodologias da mesiraziun per mintga areal.</li>
+                <li>Decisiuns en la gestiun dal talent uman, inclusiv recrutament, atribuziun da chargia e evaluaziun da la prestaziun.</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 — Master's Thesis · Vicomtech -->
+      <div class="exp-item">
+        <div class="exp-period">2024<br>2025</div>
+        <div class="exp-body">
+          <div class="exp-role">
+            <span data-lang="en" class="visible">Master's Thesis Researcher</span>
+            <span data-lang="es">Investigador de Tesis de Máster</span>
+            <span data-lang="rm">Retschertader da Tesa da Master</span>
+          </div>
+          <div class="exp-org">
+            Vicomtech
+            <span class="exp-org-sep">·</span>
+            <span data-lang="en" class="visible">San Sebastián, Spain</span>
+            <span data-lang="es">San Sebastián, España</span>
+            <span data-lang="rm">San Sebastián, Spagna</span>
+          </div>
+          <div class="exp-desc">
+            <ul>
+              <div data-lang="en" class="visible">
+                <li>Participation in a research project aimed at improving the robustness of deep learning models in autonomous driving.</li>
+                <li>Docker implementation of state-of-the-art DL models.</li>
+                <li>Load pipeline design and data standardisation for multiple datasets.</li>
+              </div>
+              <div data-lang="es">
+                <li>Participación en un proyecto de investigación orientado a mejorar la robustez de modelos de Deep Learning en conducción autónoma.</li>
+                <li>Implementación en Docker de modelos DL del estado del arte.</li>
+                <li>Diseño de pipelines de carga y estandarización de datos para múltiples conjuntos de datos.</li>
+              </div>
+              <div data-lang="rm">
+                <li>Participaziun en in project da retschertga orientà a meglierar la robustezza da models da Deep Learning en la conducziun autonoma.</li>
+                <li>Implementaziun Docker da models DL dal stadi da l'art.</li>
+                <li>Design da pipelines da cargament e standardisaziun da datas per multiplicas collecziuns da datas.</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 — Junior Business Analyst · Ecopetrol -->
+      <div class="exp-item">
+        <div class="exp-period">2022<br>2023</div>
+        <div class="exp-body">
+          <div class="exp-role">
+            <span data-lang="en" class="visible">Junior Business Analyst</span>
+            <span data-lang="es">Analista de Negocios Junior</span>
+            <span data-lang="rm">Analista da Negotzis Junior</span>
+          </div>
+          <div class="exp-org">
+            Ecopetrol
+            <span class="exp-org-sep">·</span>
+            <span data-lang="en" class="visible">Bogotá, Colombia</span>
+            <span data-lang="es">Bogotá, Colombia</span>
+            <span data-lang="rm">Bogotá, Colombia</span>
+          </div>
+          <div class="exp-desc">
+            <ul>
+              <div data-lang="en" class="visible">
+                <li>Technological surveillance, benchmarking, and treatment of categorical variables.</li>
+                <li>Implementation of data infrastructure for Business Intelligence reporting.</li>
+                <li>Agile methodology application: Scrum Master and Design Thinking for technological innovation.</li>
+              </div>
+              <div data-lang="es">
+                <li>Vigilancia tecnológica, benchmarking y tratamiento de variables categóricas.</li>
+                <li>Implementación de infraestructura de datos para reportes de Business Intelligence.</li>
+                <li>Aplicación de metodología ágil: Scrum Master y Design Thinking para la innovación tecnológica.</li>
+              </div>
+              <div data-lang="rm">
+                <li>Surveglianza tecnologica, benchmarking e tractament da variablas categoricas.</li>
+                <li>Implementaziun d'infrastructura da datas per rapports da Business Intelligence.</li>
+                <li>Applicaziun da metodologia agila: Scrum Master e Design Thinking per l'innovaziun tecnologica.</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 — Research Intern · UFPS -->
+      <div class="exp-item">
+        <div class="exp-period">2021<br>2022</div>
+        <div class="exp-body">
+          <div class="exp-role">
+            <span data-lang="en" class="visible">Research Intern</span>
+            <span data-lang="es">Pasante de Investigación</span>
+            <span data-lang="rm">Intern da Retschertga</span>
+          </div>
+          <div class="exp-org">
+            Universidad Francisco de Paula Santander
+            <span class="exp-org-sep">·</span>
+            <span data-lang="en" class="visible">Cúcuta, Colombia</span>
+            <span data-lang="es">Cúcuta, Colombia</span>
+            <span data-lang="rm">Cúcuta, Colombia</span>
+          </div>
+          <div class="exp-desc">
+            <ul>
+              <div data-lang="en" class="visible">
+                <li>Development of research work in power electronics, control systems, and fibre optic telecommunications.</li>
+                <li>Writing scientific articles, designing posters, and giving oral presentations at scientific events to disseminate results.</li>
+                <li>Design and implementation of electronic systems for research projects.</li>
+              </div>
+              <div data-lang="es">
+                <li>Desarrollo de trabajo de investigación en electrónica de potencia, sistemas de control y telecomunicaciones por fibra óptica.</li>
+                <li>Redacción de artículos científicos, diseño de pósters y presentaciones orales en eventos científicos para divulgar los resultados.</li>
+                <li>Diseño e implementación de sistemas electrónicos para proyectos de investigación.</li>
+              </div>
+              <div data-lang="rm">
+                <li>Svilup da lavur da retschertga en electronica da potenza, sistems da control e telecomunicaziuns cun fibra optica.</li>
+                <li>Redacziun d'artitgels scientifics, design da posters e presentaziuns oralas ad eveniments scientifics per divulgar ils resultats.</li>
+                <li>Design ed implementaziun da sistems electronics per projects da retschertga.</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /exp-list -->
+  </section>
+
   <!-- ── CONTACT ── -->
   <section id="contact">
     <div class="section-label">
-      <span data-lang="en" class="visible">04 — Contact</span>
-      <span data-lang="es">04 — Contacto</span>
-      <span data-lang="rm">04 — Contact</span>
+      <span data-lang="en" class="visible">05 — Contact</span>
+      <span data-lang="es">05 — Contacto</span>
+      <span data-lang="rm">05 — Contact</span>
     </div>
     <h2 class="section-title">
       <span data-lang="en" class="visible">Get in touch</span>
@@ -1573,17 +1889,17 @@
       <!-- ✏️  Update all hrefs -->
       <a href="mailto:you@institution.edu" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-        you@institution.edu
+        jorgeeliecergv@ufps.edu.co
       </a>
       <a href="https://orcid.org/0000-0002-2190-010X" target="_blank" class="contact-link">
         <span class="orcid-icon" style="width:16px;height:16px;font-size:.5rem;">iD</span>
         <!-- ORCID -->
       </a>
-      <a href="https://scholar.google.com" target="_blank" class="contact-link">
+      <a href="https://scholar.google.com/citations?user=IGZDYH4AAAAJ&hl=es&authuser=7" target="_blank" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         Google Scholar
       </a>
-      <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+      <a href="https://github.com/jgalvis-velandia/" target="_blank" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
         GitHub
       </a>
@@ -1599,9 +1915,9 @@
     <span data-lang="es">© 2026 J. Galvis-Velandia. Construido con HTML — alojado en GitHub Pages.</span>
     <span data-lang="rm">© 2026 J. Galvis-Velandia. Construì cun HTML — alugià sin GitHub Pages.</span>
   </span>
-  <a href="https://orcid.org/0000-0002-2190-010X" target="_blank" style="color:var(--fade);text-decoration:none;">
+  <!-- <a href="https://orcid.org/0000-0002-2190-010X" target="_blank" style="color:var(--fade);text-decoration:none;">
     ORCID 0000-0002-2190-010X
-  </a>
+  </a> -->
 </footer>
 
 <!-- ═══════════ SCRIPTS ═══════════ -->
